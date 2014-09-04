@@ -1,18 +1,10 @@
 READ ME
 =======
 
-ytbygvyg
---------
-
-### 6tf6r
-
-####yg7y
-
-
-ctf6f6 `code` 6tf6tf
+Server Python
+-------------
 
 ```
-yg7tf76g8yh
-9uh8yh
+cd ~/Documents/portfolio-soso
+python -m SimpleHTTPServer
 ```
-
