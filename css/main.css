@@ -103,6 +103,10 @@ main {
 	margin-top: 50px;
 }
 
+#gallery {
+    margin-bottom: 2em;
+}
+
 .pure-g > div {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
