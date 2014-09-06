@@ -4,7 +4,7 @@ $(document).ready(function() {
 	// construct an instance of Headroom, passing the element
 	var headroom  = new Headroom(header);
 	// initialise
-	headroom.init();
+	//headroom.init();
 
 	$('#image-grid').magnificPopup({
 		type: 'image',
@@ -22,7 +22,7 @@ $(document).ready(function() {
 				enabled:true
 			},
 			retina: {
-				ratio: 2
+				ratio: 1
 			}
 		});
 	});
