@@ -22,7 +22,7 @@ $(document).ready(function() {
 				enabled:true
 			},
 			retina: {
-				ratio: 2
+				ratio: 1
 			}
 		});
 	});
