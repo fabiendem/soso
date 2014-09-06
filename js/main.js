@@ -14,7 +14,7 @@ $(document).ready(function() {
 				enabled:true
 			},
 			retina: {
-				ratio: 1
+				ratio: 2
 			}
 		});
 	});
