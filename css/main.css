@@ -58,8 +58,9 @@ hr {
 .thumbnail {
 	margin: 0 auto;
     border: #FFFFFF 6px solid;
+    -webkit-transform: translateZ(0);
 
-    /* Black and white */
+        /* Black and white */
     -webkit-filter: grayscale(1);
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
@@ -104,6 +105,10 @@ main {
 
 #gallery {
     margin-bottom: 2em;
+}
+
+.mfp-img {
+
 }
 
 .pure-g > div {
