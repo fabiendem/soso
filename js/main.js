@@ -6,14 +6,6 @@ $(document).ready(function() {
 	// initialise
 	//headroom.init();
 
-	$('#image-grid').magnificPopup({
-		type: 'image',
-		delegate: 'a',
-		gallery:{
-			enabled:true
-		}
-	});
-
 	$('.image-grid').each(function() { // the containers for all your galleries
 		$(this).magnificPopup({
 			delegate: 'a', // the selector for gallery item
