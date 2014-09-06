@@ -58,7 +58,7 @@ hr {
 
 .thumbnail {
 	margin: 0 auto;
-    border: #E9E9E9 1px solid;
+    border: #FFFFFF 6px solid;
 
     /* Black and white */
     -webkit-filter: grayscale(1);
@@ -81,6 +81,14 @@ hr {
     -ms-transition-duration: 1s;
     -o-transition-duration: 1s;
     transition-duration: 1s;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    box-shadow: 2px 2px 7px 0px rgba(38, 50, 50, 0.15);
+    -webkit-box-shadow: 2px 2px 7px 0px rgba(38, 50, 50, 0.15);
+    -moz-box-shadow: 2px 2px 7px 0px rgba(38, 50, 50, 0.15);
 }
 
 .thumbnail:hover {
