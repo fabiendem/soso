@@ -4,7 +4,7 @@ $(document).ready(function() {
 	// construct an instance of Headroom, passing the element
 	var headroom  = new Headroom(header);
 	// initialise
-	headroom.init();
+	//headroom.init();
 
 	$('#image-grid').magnificPopup({
 		type: 'image',
