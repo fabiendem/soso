@@ -18,7 +18,8 @@ body {
 .pure-menu.pure-menu-open {
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
-    background-color: #d8d8d8;
+    background-color: #fdfdfd;
+    border-bottom: #E9E9E9 1px solid;
 }
 
 .header-fixed {
@@ -27,6 +28,13 @@ body {
 	right: 0;
 	left: 0;
 	top: 0;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .headroom {
@@ -50,6 +58,7 @@ body {
 
 .thumbnail {
 	margin: 0 auto;
+    border: #E9E9E9 1px solid;
 
     /* Black and white */
     -webkit-filter: grayscale(1);
@@ -114,10 +123,12 @@ main {
 
 .contact,
 footer {
-	height: 100px;
-	padding: 20px;
+	height: 50px;
+	padding: 10px;
 }
 
 footer {
-	text-align: center;
+    font-family: 'Quicksand', sans-serif;
+	text-align: left;
+    font-size: 12px;
 }
