@@ -28,10 +28,16 @@ body {
     font-weight: bold;
     background-color: #fdfdfd;
     border-bottom: #E9E9E9 1px solid;
+    padding: 4px 0 4px 0;
 }
 
 .pure-menu li a {
     padding: 0 10px 0 10px;
+}
+
+.pure-menu li a:hover {
+    background: transparent;
+    color: #222222; 
 }
 
 .header-fixed {
