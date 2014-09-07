@@ -107,8 +107,9 @@ main {
     margin-bottom: 2em;
 }
 
-.mfp-img {
-
+img.mfp-img {
+    width: auto !important;
+    max-width: 100% !important;
 }
 
 .pure-g > div {
