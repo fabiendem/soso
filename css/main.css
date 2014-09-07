@@ -120,6 +120,10 @@ main {
 	margin-top: 50px;
 }
 
+#gallery {
+    margin-bottom: 2em;
+}
+
 img.mfp-img {
     width: auto !important;
     max-width: 100% !important;
@@ -145,6 +149,7 @@ img.mfp-img {
     max-width: 140px;
     height: auto;
 }
+
 
 .contact {
 }
