@@ -18,11 +18,19 @@ body {
     padding: 0.2em 0;
 }
 
+#menu-items {
+    margin-left: 9px;
+}
+
 .pure-menu.pure-menu-open {
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
     background-color: #fdfdfd;
     border-bottom: #E9E9E9 1px solid;
+}
+
+.pure-menu li a {
+    padding: 0 10px 0 10px;
 }
 
 .header-fixed {
@@ -123,16 +131,13 @@ img.mfp-img {
 
 .about {
     padding: 0.8em;
+    margin: 0 2em 0 2em;
 }
 
 .about-img {
     float: left;
     margin-top: 18px;
     padding-right: 1.6em;
-}
-
-.about p {
-    text-align: justify;
 }
 
 .contact {
@@ -142,6 +147,7 @@ img.mfp-img {
 footer {
 	height: 50px;
 	padding: 10px;
+    margin-left: 10px;
 }
 
 footer {
