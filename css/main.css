@@ -153,6 +153,11 @@ img.mfp-img {
     margin: 0 2em 0 2em;
 }
 
+.about h2 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+
 .about-img {
     float: left;
     margin-right: 1.6em;
