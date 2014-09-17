@@ -44,6 +44,21 @@ body {
     color: #222222; 
 }
 
+.contact-icons {
+    display: inline-block; 
+    position: absolute;
+    bottom: -5px;
+    right: 0; 
+    margin-right: 10px;
+}
+
+.contact-icons a {
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 6px;
+    color: #8a8a8a;
+}
+
 .header-fixed {
 	position: fixed;
 	z-index: 10;
@@ -195,3 +210,15 @@ only screen and (                min-resolution: 2dppx) {
         background-image: url('../assets/groovepaper@2x.png');
     }
 }
+
+
+@media screen and (max-width: 48em){
+    .contact-icons {
+        display: none;
+    }
+
+}
+
+
+
+
