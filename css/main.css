@@ -170,7 +170,7 @@ img.mfp-img {
 .about,
 .contact {
     padding: 0.8em;
-    margin: 0 2em 0 2em;
+    margin: 0 3em 0 1em;
 }
 
 .contact h2,
@@ -182,7 +182,7 @@ img.mfp-img {
 .about-img {
     float: left;
     margin-right: 1.6em;
-    max-width: 140px;
+    max-width: 100px;
     height: auto;
 }
 
