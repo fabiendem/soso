@@ -225,7 +225,20 @@ footer a {
 
 footer a:hover {
     color: #222222;
+}
+
+p.rights {
+    margin-bottom: 2px;
 }  
+
+p.squeezer {
+    margin-top: 0px;
+}
+
+.icon-squeezer {
+    font-size: 30px;
+    vertical-align: middle;
+}
 
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
