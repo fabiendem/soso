@@ -261,6 +261,12 @@ only screen and (                min-resolution: 2dppx) {
 
 }
 
-
+@media screen and (max-width: 410px){
+    .about-img {
+        margin: 0 auto;
+        float: none;
+        display: block;
+    }
+}
 
 
