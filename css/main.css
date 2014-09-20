@@ -208,13 +208,14 @@ img.mfp-img {
 
 span.icon-contact {
     font-size: 65px;
-    margin: 0 29px;
+    margin: 0 25px;
     vertical-align: middle;
     color: #707070;
+    padding: 0 10px 0 0;
 }
 
 .contact p {
-    margin-left: 123px;
+    margin-left: 127px;
     margin-top: 0;
     margin-bottom: 9px;
 }
