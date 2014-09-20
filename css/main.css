@@ -178,6 +178,17 @@ img.mfp-img {
         padding: 0.8em;
  }
 
+/*
+Special anchor for the about section on a mobile
+So the menu does not hide the section when you click on about
+*/
+ #about{
+    display: block;
+    position: relative;
+    top: -66px;
+    visibility: hidden;
+}
+
 .about,
 .contact {
     padding: 0.8em;
@@ -367,8 +378,4 @@ only screen and (                min-resolution: 2dppx) {
         float: none;
         display: block;
     }
- }
- 
- 
-
-
+}
