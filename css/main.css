@@ -245,6 +245,62 @@ p.squeezer {
     vertical-align: middle;
 }
 
+/*slider*/
+/*left*/
+.mfp-arrow-left:before,
+.mfp-arrow-left .mfp-b {
+    width: 42px;
+    height: 42px;
+    background: #3f3f3f;
+    -moz-border-radius: 74px;
+    -webkit-border-radius: 74px;
+    border-radius: 74px;
+    left: 26px;
+}
+
+/*before left and right*/
+.mfp-arrow:before,
+.mfp-arrow .mfp-b {
+    margin-left: 0;
+    border: none;
+}
+
+/*after*/
+.mfp-arrow-right:after,
+.mfp-arrow-right .mfp-a {
+    border-left: 21px solid white;
+    margin-left: 39px;
+}
+
+/*after left and rigth*/
+.mfp-arrow:after,
+.mfp-arrow .mfp-a {
+    
+}
+
+/*right*/
+
+/*before*/
+.mfp-arrow-right:before,
+.mfp-arrow-right .mfp-b {
+    width: 42px;
+    height: 42px;
+    background: #3f3f3f;
+    -moz-border-radius: 74px;
+    -webkit-border-radius: 74px;
+    border-radius: 74px;
+    left: 16px;
+}
+
+/*after*/
+.mfp-arrow-right:after,
+.mfp-arrow-right .mfp-a {
+    border-left: 18px solid white;
+    margin-left: 31px;
+}
+
+
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
