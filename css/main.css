@@ -191,22 +191,25 @@ img.mfp-img {
 
 .contact h2 {
     font-size: 1.17em;
-    margin: 0;
+    margin: 1em 0 0;
 }
 
 span.icon-colibri {
-    font-size: 70px;
-    margin: 0 25px;
-    vertical-align: middle;
+    font-size: 50px;
+    margin: 0 20px;
+    vertical-align: text-top;
     color: #707070;
 }
 
 .contact p {
-    margin-left: 8em;
+    margin-left: 123px;
+    margin-top: 0;
+    margin-bottom: 6px;
 }
 
 .contact p a {
     color: #808080;
+    text-decoration: none;
 }
 
 .contact p a:hover {
