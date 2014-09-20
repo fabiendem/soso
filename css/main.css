@@ -206,10 +206,10 @@ img.mfp-img {
     display: inline-block;
 }
 
-span.icon-colibri {
-    font-size: 50px;
-    margin: 0 20px;
-    vertical-align: text-top;
+span.icon-contact {
+    font-size: 65px;
+    margin: 0 29px;
+    vertical-align: middle;
     color: #707070;
 }
 
@@ -353,7 +353,7 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 @media screen and (max-width: 490px){   
-    span.icon-colibri {
+    span.icon-contact {
         margin: 0 10px 0 0;
     }
     .contact p {
