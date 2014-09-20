@@ -12,6 +12,10 @@ body {
     color: #505050;
 }
 
+h2 {
+    color: #3D6474;
+}
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -23,12 +27,14 @@ body {
     font-size: 16px;
     margin: 0 0 0 1em;
     vertical-align: sub;
-    color: #606060;
+    color: #4D7E91;
 }
 
 .pure-menu.pure-menu-open.pure-menu-horizontal a.pure-menu-heading {
     padding-left: 6px;
+    padding-right: 0;
 }
+
 
 #menu-items {
     margin-left: 10px;
@@ -42,17 +48,24 @@ body {
     padding: 4px 0 4px 0;
 }
 
-.pure-menu a, .pure-menu .pure-menu-heading {
+.pure-menu a,
+.pure-menu .pure-menu-heading {
     white-space: normal;
+    color: #3D6474;
+}
+
+.pure-menu .pure-menu-selected a {
+    color: #3D6474;
 }
 
 .pure-menu li a {
     padding: 0 10px 0 10px;
+    color: #89A1A8;
 }
 
 .pure-menu li a:hover {
     background: transparent;
-    color: #222222; 
+    color: #649EB4; 
 }
 
 .contact-icons {
@@ -67,11 +80,11 @@ body {
     display: inline-block;
     font-size: 1.5em;
     padding: 6px 4px;
-    color: #9e9e9e;
+    color: #4D7E91;
 }
 
 .contact-icons a:hover {
-    color: #8a8a8a;
+    color: #649EB4;
 }
 
 .header-fixed {
@@ -178,6 +191,17 @@ img.mfp-img {
         padding: 0.8em;
  }
 
+/*
+Special anchor for the about section on a mobile
+So the menu does not hide the section when you click on about
+*/
+ #about{
+    display: block;
+    position: relative;
+    top: -66px;
+    visibility: hidden;
+}
+
 .about,
 .contact {
     padding: 0.8em;
@@ -210,7 +234,7 @@ img.mfp-img {
 span.icon-contact {
     font-size: 65px;
     margin: 0 25px;
-    color: #707070;
+    color: #4D7E91;
     padding: 0 10px 0 0;
     float: left;
 }
@@ -222,12 +246,12 @@ span.icon-contact {
 }
 
 .contact p a {
-    color: #808080;
+    color: #4D7E91;
     text-decoration: none;
 }
 
 .contact p a:hover {
-    color: #222222;
+    color: #649EB4;
 }
 
 .contact p a.icon-email,
@@ -255,13 +279,13 @@ footer {
 }
 
 footer a {
-    color: #808080;
+    color: #4D7E91;
     text-decoration: none;
     font-weight: bolder;
 }  
 
 footer a:hover {
-    color: #222222;
+    color: #649EB4;
 }
 
 p.rights {
@@ -331,8 +355,6 @@ p.squeezer {
     margin-left: 31px;
 }
 
-
-
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -346,14 +368,22 @@ only screen and (                min-resolution: 2dppx) {
     }
 }
 
-
+/* Until 740px, there is not enough space to show the contact icons */
 @media screen and (max-width: 740px){
     .contact-icons {
         display: none;
     }
-
 }
 
+/*Until 625px, menu is on 2 lines*/
+@media screen and (max-width: 625px){
+    /*Push down main section*/
+    main {
+        margin-top: 75px;
+    }
+}
+
+/* Until 490px stick the contacts details under the icon and title*/
 @media screen and (max-width: 490px){   
     span.icon-contact {
         margin: 0 10px 0 0;
@@ -366,19 +396,28 @@ only screen and (                min-resolution: 2dppx) {
     }
 }
 
+/* 
+Until 410px, 
+remove the colibri in the menu and reshape the menu,
+break line after my photo 
+*/
 @media screen and (max-width: 410px){
     .about-img {
         float: none;
         display: block;
     }
+
     .icon-colibri2 {
         display: none;
     }
-
     .pure-menu.pure-menu-open.pure-menu-horizontal a.pure-menu-heading {
         padding-left: 0;
-        margin-left: 1em;
     }
+
+    a.pure-menu-heading.sonial {
+        padding-left: 1em!important;
+    }
+
     ul#menu-items {
         margin-left: 0;
     }
@@ -387,8 +426,4 @@ only screen and (                min-resolution: 2dppx) {
         padding-left: 0;
         margin-left: 1em;
     }
- }
- 
- 
-
-
+}
