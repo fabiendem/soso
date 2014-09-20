@@ -198,7 +198,7 @@ span.icon-colibri {
     font-size: 70px;
     margin: 0 25px;
     vertical-align: middle;
-    color: #808080
+    color: #707070;
 }
 
 .contact p {
@@ -206,7 +206,7 @@ span.icon-colibri {
 }
 
 .contact p a {
-    color: #707070;
+    color: #808080;
 }
 
 .contact p a:hover {
