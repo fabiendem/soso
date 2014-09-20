@@ -19,6 +19,17 @@ body {
     padding: 0.2em 0;
 }
 
+.icon-colibri2 {
+    font-size: 16px;
+    margin: 0 0 0 1em;
+    vertical-align: sub;
+    color: #606060;
+}
+
+.pure-menu.pure-menu-open.pure-menu-horizontal a {
+    padding-left: 0;
+}
+
 #menu-items {
     margin-left: 10px;
 }
