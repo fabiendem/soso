@@ -202,16 +202,17 @@ img.mfp-img {
 
 .contact h2 {
     font-size: 1.17em;
-    margin: 1em 0 0;
+    margin: 10px 0 1em;
     display: inline-block;
+    vertical-align: top;
 }
 
 span.icon-contact {
     font-size: 65px;
     margin: 0 25px;
-    vertical-align: middle;
     color: #707070;
     padding: 0 10px 0 0;
+    float: left;
 }
 
 .contact p {
@@ -357,6 +358,9 @@ only screen and (                min-resolution: 2dppx) {
     span.icon-contact {
         margin: 0 10px 0 0;
     }
+    .contact h2 {
+        margin-bottom: 30px;
+    }
     .contact p {
         margin: 15px 0 0;
     }
@@ -366,6 +370,22 @@ only screen and (                min-resolution: 2dppx) {
     .about-img {
         float: none;
         display: block;
+    }
+    .icon-colibri2 {
+        display: none;
+    }
+
+    .pure-menu.pure-menu-open.pure-menu-horizontal a.pure-menu-heading {
+        padding-left: 0;
+        margin-left: 1em;
+    }
+    ul#menu-items {
+        margin-left: 0;
+    }
+
+    li.pure-menu-selected a {
+        padding-left: 0;
+        margin-left: 1em;
     }
  }
  
