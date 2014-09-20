@@ -26,8 +26,8 @@ body {
     color: #606060;
 }
 
-.pure-menu.pure-menu-open.pure-menu-horizontal a {
-    padding-left: 0;
+.pure-menu.pure-menu-open.pure-menu-horizontal a.pure-menu-heading {
+    padding-left: 6px;
 }
 
 #menu-items {
@@ -345,7 +345,7 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 740px){
     .contact-icons {
         display: none;
     }
