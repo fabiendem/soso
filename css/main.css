@@ -423,7 +423,7 @@ break line after my photo
     }
 
     li.pure-menu-selected a {
-        padding-left: 0;
-        margin-left: 1em;
+        padding-left: 0!important;
+        margin-left: 1em!important;
     }
 }
