@@ -342,8 +342,6 @@ p.squeezer {
     margin-left: 31px;
 }
 
-
-
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -357,14 +355,22 @@ only screen and (                min-resolution: 2dppx) {
     }
 }
 
-
+/* Until 740px, there is not enough space to show the contact icons */
 @media screen and (max-width: 740px){
     .contact-icons {
         display: none;
     }
-
 }
 
+/*Until 625px, menu is on 2 lines*/
+@media screen and (max-width: 625px){
+    /*Push down main section*/
+    main {
+        margin-top: 75px;
+    }
+}
+
+/* Until 490px stick the contacts details under the icon and title*/
 @media screen and (max-width: 490px){   
     span.icon-contact {
         margin: 0 10px 0 0;
@@ -377,6 +383,11 @@ only screen and (                min-resolution: 2dppx) {
     }
 }
 
+/* 
+Until 410px, 
+remove the colibri in the menu and reshape the menu,
+break line after my photo 
+*/
 @media screen and (max-width: 410px){
     .about-img {
         float: none;
