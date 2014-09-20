@@ -173,7 +173,6 @@ img.mfp-img {
     margin: 0 3em 0 1em;
 }
 
-.contact h2,
 .about h2 {
     font-size: 1.17em;
     margin: 1em 0;
@@ -190,6 +189,20 @@ img.mfp-img {
     margin-bottom: 16px;
 }
 
+.contact h2 {
+    font-size: 1.17em;
+    margin: 0;
+}
+
+span.icon-colibri {
+    font-size: 70px;
+    margin: 0 25px;
+    vertical-align: middle;
+}
+
+.contact p {
+    margin-left: 8em;
+}
 
 .contact p a {
     color: #808080;
@@ -199,7 +212,8 @@ img.mfp-img {
     color: #222222;
 }
 
-.contact p a.icon-email {
+.contact p a.icon-email,
+.contact p a.icon-linkdn {
     vertical-align: text-bottom;
     font-size: 1.3em;
     text-decoration: none;
