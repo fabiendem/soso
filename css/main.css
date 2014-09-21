@@ -111,6 +111,7 @@ h2 {
 .github-fork-ribbon-wrapper {
     width: 180px;
     height: 180px;
+    z-index: 100;
 }
 
 .github-fork-ribbon {
