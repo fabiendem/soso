@@ -389,6 +389,13 @@ only screen and (                min-resolution: 2dppx) {
     }
 }
 
+/* Until 770px, there is not enough space to show the banner */
+@media screen and (max-width: 770px){
+    .github-fork-ribbon-wrapper {
+        display: none;
+    }
+}
+
 /* Until 740px, there is not enough space to show the contact icons */
 @media screen and (max-width: 740px){
     .contact-icons {
