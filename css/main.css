@@ -104,6 +104,10 @@ h2 {
 	top: 0;
 }
 
+.lt-ie9 .github-fork-ribbon-wrapper {
+    display: none;
+}
+
 .github-fork-ribbon-wrapper {
     width: 180px;
     height: 180px;
