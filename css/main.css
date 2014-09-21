@@ -95,8 +95,33 @@ h2 {
 	top: 0;
 }
 
-.right .github-fork-ribbon {
-    background-color: #4D7E91;
+.github-fork-ribbon-wrapper {
+    width: 180px;
+    height: 180px;
+}
+
+.github-fork-ribbon {
+    background-color: #4F8FA8;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.github-fork-ribbon-wrapper.right .github-fork-ribbon{
+    top: 52px;
+    right: -50px;
+    transform: rotate(43deg);
+    -webkit-transform: rotate(43deg);
+    -moz-transform: rotate(43deg);
+    -ms-transform: rotate(43deg);
+    -o-transform: rotate(43deg);
+}
+
+.github-fork-ribbon a,
+.github-fork-ribbon a:hover {
+    padding: 4px 0 0px 0;
+    width: 242px;
+    margin-left: 4px;
 }
 
 hr {
@@ -104,25 +129,6 @@ hr {
     border: 0;
     height: 0;
     border-top: 1px solid rgba(233, 233, 233, 1);
-}
-
-.headroom {
-    transition: transform 200ms linear;
-    -webkit-transition: transform 200ms linear;
-    -moz-transition: transform 200ms linear;
-    -o-transition: transform 200ms linear;
-}
-.headroom--pinned {
-    transform: translateY(0%);
-    -webkit-transform: translateY(0%);
-    -moz-transform: translateY(0%);
-    -o-transform: translateY(0%);
-}
-.headroom--unpinned {
-    transform: translateY(-100%);
-    -webkit-transform: translateY(-100%);
-    -moz-transform: translateY(-100%);
-    -o-transform: translateY(-100%);
 }
 
 #gallery {
