@@ -95,6 +95,10 @@ h2 {
 	top: 0;
 }
 
+.right .github-fork-ribbon {
+    background-color: #4D7E91;
+}
+
 hr {
 
     border: 0;
