@@ -12,9 +12,11 @@ body {
     color: #2D5E72;
 }
 
-h2 {
+h2,
+h3 {
     color: #4D7E91;
 }
+
 
 .browsehappy {
     margin: 0.2em 0;
@@ -138,6 +140,7 @@ h2 {
     margin-left: 4px;
 }
 
+
 hr {
 
     border: 0;
@@ -245,6 +248,20 @@ So the menu does not hide the section when you click on about
     height: auto;
 }
 
+.date {
+    color: #4D7E91;
+    font-weight: bold;
+}
+
+.work-done {
+    padding: 0;
+}
+
+.work-done li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
 .contact {
     margin-bottom: 16px;
 }
@@ -271,20 +288,31 @@ span.icon-contact {
     line-height: 1.3em;
 }
 
+.about p a,
+.work-done li a,
 .contact p a {
-    color: #4D7E91;
+    color: #649EB4;
     text-decoration: none;
 }
 
+.about p a:hover,
+.work-done li a:hover,
 .contact p a:hover {
-    color: #649EB4;
+    color: #4D7E91;
 }
 
 .contact p a.icon-email,
 .contact p a.icon-linkdn {
+    color: #4D7E91;
     vertical-align: text-bottom;
     font-size: 1.3em;
     text-decoration: none;
+    padding-right: 5px;
+}
+
+.contact p a.icon-email:hover,
+.contact p a.icon-linkdn:hover {
+    color: #649EB4;
 }
 
 .contact-script {
