@@ -301,6 +301,7 @@ span.icon-contact {
     color: #4D7E91;
 }
 
+.contact p a.icon-tumblr,
 .contact p a.icon-email,
 .contact p a.icon-linkdn {
     color: #4D7E91;
@@ -310,6 +311,7 @@ span.icon-contact {
     padding-right: 5px;
 }
 
+.contact p a.icon-tumblr:hover,
 .contact p a.icon-email:hover,
 .contact p a.icon-linkdn:hover {
     color: #649EB4;
