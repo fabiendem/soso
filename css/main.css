@@ -216,10 +216,10 @@ img.mfp-img {
  }
 
 /*
-Special anchor for the about section on a mobile
+Special anchor for the portfolio/about section on a mobile
 So the menu does not hide the section when you click on about
 */
- #about{
+ #about, #portfolio {
     display: block;
     position: relative;
     top: -66px;
