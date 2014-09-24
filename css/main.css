@@ -81,7 +81,7 @@ h3 {
 .contact-icons {
     display: inline-block; 
     position: absolute;
-    bottom: -7px;
+    bottom: -5px;
     right: 0; 
     margin-right: 20px;
 }
@@ -481,11 +481,7 @@ break line after my photo
     }
 
     ul#menu-items {
-        margin-left: 0;
+        margin-left: 5px;
     }
 
-    li.pure-menu-selected a {
-        padding-left: 0!important;
-        margin-left: 1em!important;
-    }
 }
