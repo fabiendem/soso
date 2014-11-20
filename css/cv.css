@@ -1,0 +1,73 @@
+a {
+	text-decoration: none;
+}
+
+#main-cv {
+	margin-top: 30px;
+}
+
+#header-cv {
+	background-color: #FDFDFD;
+	border-bottom: #E9E9E9 1px solid;
+}
+
+.title-cv {
+	padding-left: 1.8em!important;
+}
+
+.name-cv {
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-bottom: 2px;
+	margin-top: 20px;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.job-cv {
+	font-weight: 400;
+	color: #E2A100;
+	margin-top: 0;
+	margin-bottom: 5px;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.subtitle-cv {
+	font-weight: 100;
+	margin: 1px 0 1px 0;
+}
+
+.contact-cv {
+	list-style: none;
+	margin-top: 20px;
+}
+
+.contact-cv li {
+	margin-bottom: 10px;
+}
+
+.contact-cv li span {
+	font-size: 1.5em;
+	padding-right: 15px;
+	color: #EDB20A;
+	vertical-align: middle;
+}
+
+.contact-cv li span:hover {
+	color: #F9C634;
+}
+
+.contact-cv li a {
+	color: #4D7E91; 
+}
+
+.contact-cv li a:hover {
+	color: #649EB4; 
+}
+
+#summary-cv div p {
+	padding-left: 1.8em;
+	padding-right: 2.8em;
+	line-height: 25px;
+	font-family: 'Quicksand', sans-serif;
+}
+
