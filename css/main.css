@@ -269,7 +269,8 @@ span.icon-contact {
 
 .contact p a.icon-tumblr,
 .contact p a.icon-email,
-.contact p a.icon-linkdn {
+.contact p a.icon-linkdn,
+.contact p a.icon-cv {
     color: #4D7E91;
     vertical-align: text-bottom;
     font-size: 1.3em;
@@ -279,7 +280,8 @@ span.icon-contact {
 
 .contact p a.icon-tumblr:hover,
 .contact p a.icon-email:hover,
-.contact p a.icon-linkdn:hover {
+.contact p a.icon-linkdn:hover,
+.contact p a.icon-cv:hover {
     color: #649EB4;
 }
 
@@ -391,7 +393,7 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 /* Until 740px, there is not enough space to show the contact icons */
-@media screen and (max-width: 750px){
+@media screen and (max-width: 780px){
     .contact-icons {
         display: none;
     }
