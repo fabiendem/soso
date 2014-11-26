@@ -83,9 +83,14 @@ a {
 /*---------*/
 
 /* Until 760px, there is not enough space to show the contact icons */
-@media screen and (max-width: 780px){
+@media screen and (max-width: 758px){
     .contact-cv {
         float: none;
     }
+}
+@media screen and (max-width: 600px){
+	#header-cv div {
+		margin-top: 35px;
+	}
 }
 
