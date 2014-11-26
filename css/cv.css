@@ -72,13 +72,83 @@ a {
 }
 
 #summary-cv div p {
-	padding-left: 1.8em;
-	padding-right: 2.8em;
+	padding-left: 3em;
+	padding-right: 4.8em;
 	line-height: 25px;
 	font-family: 'Quicksand', sans-serif;
 }
 
+#skills,
+#work,
+#education,
+#com-work,
+#language {
+	padding-left: 1.8em;
+}
 
+.label {
+	color: white;
+	background-color: #EDB20A;
+	max-width: 190px;
+	padding: 10px 15px 10px 15px;
+}
+
+#skills ul {
+	padding-left: 1.2em;
+	max-width: 900px;
+}
+
+#skills ul li {
+	list-style: none;
+	display: inline-block;
+	background-color: #ffffff; 
+	width: auto;
+	margin: 0 5px 10px 0; 
+	padding: 12px;
+	-webkit-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	-moz-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	-ms-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	-o-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+}
+
+/*download button*/
+
+
+.download {
+	position: fixed;
+	bottom: 55%;
+	right: 0;
+	width: auto;
+	background-color: rgba(100, 158, 180, 0.77);
+	padding: 5px 15px;
+}
+
+.download:hover{
+	background-color: rgba(44, 146, 184, 0.77);
+}
+
+
+.download div{
+	font-weight: bolder;
+	margin-right: 2px;
+	text-align: center;
+	margin-top: 3px;
+}
+
+.icon-download {
+	color: #fff;
+	font-weight: bolder;
+	font-size: 20px;
+}
+
+
+.download-text p {
+	margin: 0;
+	font-weight: bold;
+	font-size: small;
+	color: #fff;
+}
 
 /*---------*/
 
@@ -91,6 +161,15 @@ a {
 @media screen and (max-width: 600px){
 	#header-cv div {
 		margin-top: 35px;
+	}
+
+	#summary-cv div p {
+		padding-right: 2em;
+		padding-left: 1.8em;
+	}
+
+	#skills ul {
+		padding-left: 0;
 	}
 }
 
