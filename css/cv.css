@@ -9,10 +9,13 @@ a {
 #header-cv {
 	background-color: #FDFDFD;
 	border-bottom: #E9E9E9 1px solid;
+	padding-left: 1.8em;
+	padding-bottom: 0.8em;
 }
 
-.title-cv {
-	padding-left: 1.8em!important;
+#header-cv div {
+	display: inline-block;
+	margin-right: 40px;
 }
 
 .name-cv {
@@ -38,7 +41,11 @@ a {
 
 .contact-cv {
 	list-style: none;
-	margin-top: 20px;
+	display: inline-block;
+	padding-left: 0;
+	float: right;
+	margin-right: 33px;
+	padding-top: 13px;
 }
 
 .contact-cv li {
@@ -69,5 +76,16 @@ a {
 	padding-right: 2.8em;
 	line-height: 25px;
 	font-family: 'Quicksand', sans-serif;
+}
+
+
+
+/*---------*/
+
+/* Until 760px, there is not enough space to show the contact icons */
+@media screen and (max-width: 780px){
+    .contact-cv {
+        float: none;
+    }
 }
 
