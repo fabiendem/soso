@@ -239,16 +239,16 @@ So the menu does not hide the section when you click on about
     vertical-align: top;
 }
 
-span.icon-contact {
-    font-size: 65px;
-    margin: 0 25px;
+div.icon-contact {
+    font-size: 45px;
+    margin: 0 8px;
     color: #4D7E91;
     padding: 0 10px 0 0;
-    float: left;
+    display: inline-block;
 }
 
 .contact p {
-    margin-left: 127px;
+    margin-left: 0;
     margin-top: 0;
     margin-bottom: 9px;
     line-height: 1.3em;
@@ -411,9 +411,6 @@ only screen and (                min-resolution: 2dppx) {
 @media screen and (max-width: 490px){   
     span.icon-contact {
         margin: 0 10px 0 0;
-    }
-    .contact h2 {
-        margin-bottom: 30px;
     }
     .contact p {
         margin: 15px 0 0;
