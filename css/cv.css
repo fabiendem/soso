@@ -221,6 +221,7 @@ a {
 	border-radius: 100%;
 	position: relative;
 	margin-right: 10px;
+	vertical-align: middle;
 }
 
 .circles {
