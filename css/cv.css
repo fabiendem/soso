@@ -173,6 +173,8 @@ a {
 	font-size: 14px;
 	background-color: rgba(190, 145, 1, 0.12);
 	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
 	padding: 1px 4px;
 }
 
@@ -253,15 +255,22 @@ a {
 	width: 45px;
 	height: 45px;
 	border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
 	position: relative;
 	margin-right: 10px;
 	vertical-align: middle;
+	-webkit-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	-moz-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	-ms-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	-o-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
 }
 
 .circles {
 	display: inline-block;
 	margin-right: 10px;
-	vertical-align: top;
+	vertical-align: middle;
 }
 
 .circle-oluk {
@@ -269,9 +278,20 @@ a {
 	width: 45px;
 	height: 45px;
 	border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
 	position: relative;
 	margin-bottom: 20px;
 	margin-top: 20px;
+	-webkit-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	-moz-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	-ms-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	-o-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+}
+
+.af {
+	margin-bottom: 34px;
 }
 
 
