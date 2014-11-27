@@ -3,12 +3,15 @@ a {
 }
 
 #main-cv {
-	margin-top: 30px;
+	margin: 30px auto 0;
+	max-width: 1070px;
 }
 
 #header-cv {
 	background-color: #FDFDFD;
 	border-bottom: #E9E9E9 1px solid;
+	border-left: #E9E9E9 1px solid;
+	border-right: #E9E9E9 1px solid;
 	padding-left: 1.8em;
 	padding-bottom: 0.8em;
 }
