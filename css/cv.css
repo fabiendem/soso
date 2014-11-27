@@ -109,6 +109,7 @@ a {
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
+	width: 350px
 }
 
 .list-job {
@@ -148,11 +149,14 @@ a {
 .time {
 	position: absolute;
 	top: 10px;
-	right: 15px;
+	right: 7px;
 	color: #4D7E91;
 	font-weight: bolder;
 	display: inline-block;
-	font-size: 16px;
+	font-size: 14px;
+	background-color: rgba(190, 145, 1, 0.12);
+	border-radius: 4px;
+	padding: 1px 4px;
 }
 
 /*--skills--*/
@@ -209,25 +213,62 @@ a {
 
 /*time-line*/
 
-
-.timeline-now {
+.circle {
 	background-color: rgba(64, 123, 147, 0.5); 
-	color: #fff;
 	display: inline-block;
-	padding: 19px 14px;
-	border-radius: 30px;
-	font-size: 10px;
-	font-weight: bold;
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+	position: relative;
+	margin-right: 10px;
 }
 
-.timeline {
-	background-color: rgba(64, 123, 147, 0.5); 
-	color: #fff;
+.circles {
 	display: inline-block;
-	padding: 14px 12px;
-	border-radius: 30px;
+	margin-right: 10px;
+	vertical-align: top;
+}
+
+.circle-oluk {
+	background-color: rgba(64, 123, 147, 0.5); 
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+
+.timeline-now {
+	color: #fff;
 	font-size: 10px;
 	font-weight: bold;
+	text-align: center;
+	position: absolute;
+	top: 39%;
+	left: 25%;
+}
+
+.timeline-one-date {
+	color: #fff;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	position: absolute;
+	top: 38%;
+	left: 22%;
+	margin-bottom: 10px;
+}
+
+
+.timeline-two-dates {
+	color: #fff;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	position: absolute;
+	top: 26%;
+	left: 20%;
 }
 
 
@@ -307,4 +348,14 @@ a {
 		padding-left: 0;
 	}
 }
+@media screen and (max-width: 467px){ /* time-line*/
+	.box-cv {
+		width: 277px;
+	}
+	.circles, .circle {
+		margin-right: 5px;
+	}
+}
+
+
 
