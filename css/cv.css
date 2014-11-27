@@ -316,8 +316,8 @@ a {
 .school {
 	display: inline-block;
 	position: absolute;
-	right: -14px;
-	top: -10px;
+	right: 3px;
+	top: -12px;
 }
 
 .uni {
