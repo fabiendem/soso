@@ -78,20 +78,84 @@ a {
 	font-family: 'Quicksand', sans-serif;
 }
 
+
+/*--blocks cv--*/
+
+.job-title {
+	margin:0;
+	font-size: 15px;
+	color: #2D5E72;
+}
+
+.job-location {
+	margin: 0;
+	font-size: 15px;
+	color: #2D5E72;
+	font-weight: normal;
+}
+
+.box-cv {
+	background-color: #ffffff; 
+	-webkit-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	-moz-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	-ms-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	-o-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	font-size: 14px;
+	color: #4D7E91;
+	padding: 12px 16px 12px 12px;
+	margin-bottom: 10px;
+	max-width: 410px;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.list-job {
+	padding-left: 15px;
+	margin-top: 8px;
+	margin-bottom: 0;
+}
+
 #skills,
-#work,
-#education,
-#com-work,
 #language {
 	padding-left: 1.8em;
 }
 
+#work,
+#block-right {
+	padding-left: 1.8em;
+	display: inline-block;
+}
+
 .label {
 	color: white;
-	background-color: #EDB20A;
-	max-width: 190px;
+	background-color: #EDB20A;	
 	padding: 10px 15px 10px 15px;
+	-webkit-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	-moz-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	-ms-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	-o-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	display: inline-block;
+	min-width: 90px;
 }
+
+#block-right {
+	vertical-align: top;
+}
+
+.time {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	color: #4D7E91;
+	font-weight: bolder;
+	display: inline-block;
+	font-size: 16px;
+}
+
+/*--skills--*/
 
 #skills ul {
 	padding-left: 1.2em;
@@ -112,6 +176,61 @@ a {
 	box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
 }
 
+/*--work--*/
+
+#work {
+	margin-bottom: 6px;
+}
+
+.job-now {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+	margin-top: 8px;
+}
+
+/*--education--*/
+
+.school-subjects {
+	margin-top: 8px;
+	margin-bottom: 0;
+}
+
+.education {
+	margin-bottom: 15px;
+}
+
+/*--comm-work--*/
+
+.com-work div ul {
+	margin: 0;
+	padding-left: 15px;
+}
+
+/*time-line*/
+
+
+.timeline-now {
+	background-color: rgba(64, 123, 147, 0.5); 
+	color: #fff;
+	display: inline-block;
+	padding: 19px 14px;
+	border-radius: 30px;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.timeline {
+	background-color: rgba(64, 123, 147, 0.5); 
+	color: #fff;
+	display: inline-block;
+	padding: 14px 12px;
+	border-radius: 30px;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+
 /*download button*/
 
 
@@ -120,12 +239,28 @@ a {
 	bottom: 55%;
 	right: 0;
 	width: auto;
-	background-color: rgba(100, 158, 180, 0.77);
-	padding: 5px 15px;
+	background-color: rgba(102, 171, 197, 0.65);
+	padding: 5px 14px 4px 17px;
+	border-top-left-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-bottom-left-radius: 5px;
+	box-shadow: -1px 1px 3px rgba(40, 92, 102, 0.20);
+	-webkit-box-shadow: -1px 1px 3px rgba(40, 92, 102, 0.20);
+	-moz-box-shadow: -1px 1px 3px rgba(40, 92, 102, 0.20);
+	-ms-box-shadow: -1px 1px 3px rgba(40, 92, 102, 0.20);
+	-o-box-shadow: -1px 1px 3px rgba(40, 92, 102, 0.20);
+	transition: padding 0.2s linear;
+	-webkit-transition: padding 0.2s linear;
+	-moz-transition: padding 0.2s linear;
+	-o-transition: padding 0.2s linear;
 }
 
 .download:hover{
-	background-color: rgba(44, 146, 184, 0.77);
+	background-color: rgba(73, 163, 197, 0.65);
+	padding-right: 22px;
 }
 
 
