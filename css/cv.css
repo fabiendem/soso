@@ -18,6 +18,11 @@ a {
 	margin-right: 40px;
 }
 
+.top-cv {
+	display: block!important;
+	max-width: 1245px;
+}
+
 .name-cv {
 	font-weight: 400;
 	text-transform: uppercase;
@@ -38,6 +43,8 @@ a {
 	font-weight: 100;
 	margin: 1px 0 1px 0;
 }
+
+/*contact CV*/
 
 .contact-cv {
 	list-style: none;
@@ -71,8 +78,14 @@ a {
 	color: #649EB4; 
 }
 
+/*end header*/
+
+#summary-cv {
+	max-width: 1245px;
+}
+
 #summary-cv div p {
-	padding-left: 3em;
+	padding-left: 1.8em;
 	padding-right: 4.8em;
 	line-height: 25px;
 	font-family: 'Quicksand', sans-serif;
@@ -162,11 +175,11 @@ a {
 /*--skills--*/
 
 #skills ul {
-	padding-left: 1.2em;
+	padding-left: 0;
 	max-width: 900px;
 }
 
-#language ul li,
+
 #skills ul li {
 	list-style: none;
 	display: inline-block;
@@ -298,6 +311,47 @@ a {
 	background-size: 2px 1px;
 }
 
+/*education*/
+
+.school {
+	display: inline-block;
+	position: absolute;
+	right: -14px;
+	top: -10px;
+}
+
+.uni {
+	margin-bottom: 17px;
+}
+
+
+/*languages*/
+
+
+#language .label {
+	margin-right: 15px;
+}
+
+.list-language {
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+#language ul li {
+	list-style: none;
+	display: inline-block;
+	background-color: #ffffff; 
+	width: auto;
+	margin: 0 5px 10px 0; 
+	padding: 8px;
+	-webkit-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	-moz-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	-ms-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	-o-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+	box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
+}
 
 /*download button*/
 
@@ -381,6 +435,44 @@ a {
 	}
 	.circles, .circle {
 		margin-right: 5px;
+	}
+}
+
+@media screen and (max-width: 389px) {
+	.box-cv {
+		width: 250px;
+	}
+	.job-title {
+		width: 160px;
+	}
+}
+
+
+@media screen and (max-width: 362px) {
+
+	.box-cv {
+		width: 220px;
+	}
+}
+
+@media screen and (max-width: 362px) {
+	.box-cv {
+		width: 205px;
+	}
+}
+
+
+@media screen and (max-width: 320px){
+	.box-cv {
+		width: 200px;
+	}
+	.job-title {
+		width: 140px;
+	}
+
+	.time {
+		font-size: 12px;
+		top: 13px;
 	}
 }
 
