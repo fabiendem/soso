@@ -91,10 +91,10 @@
                 <nav class="pure-menu pure-menu-open pure-menu-horizontal">
                   <a href="http://sonialahcene.com" class="pure-menu-heading"><span class="icon-colibri2"></span></a><a href="http://sonialahcene.com"  class="pure-menu-heading sonial">Sonia Lahcene Graphic Design</a>
                     <ul id="menu-items">
-                        <li class="pure-menu-selected"><a href="http://sonialahcene.com/#portfolio" title"Portfolio">Portfolio</a></li>
-                        <li><a href="http://sonialahcene.com/#about" title="About me">About</a></li>
-                        <li><a href="http://sonialahcene.com/#contact" title="Contact me">Contact</a></li>
-                        <li><a href="http://sonialahcene.com/cv" title="My CV">CV</a></li>
+                        <li class="pure-menu-selected" id="menu-item-portfolio"><a href="/#portfolio" title"Portfolio">Portfolio</a></li>
+                        <li id="menu-item-about"><a href="/#about" title="About me">About</a></li>
+                        <li id="menu-item-contact"><a href="/#contact" title="Contact me">Contact</a></li>
+                        <li id="menu-item-cv"><a href="/cv" title="My CV">CV</a></li>
                     </ul>
                     <div class="contact-icons">
                     <a href="mailto:contact@sonialahcene.com" target="blank" title="Email Sonia Lahcene" class="icon-email"></a>
@@ -323,7 +323,24 @@
                     var $this = $(this);
                     $('#menu-items li').removeClass('pure-menu-selected');
                     $this.addClass('pure-menu-selected');
+
+                    // Update Hash in the url
+                    var id = $this.attr('id');
+                    var newHash = '#' + id.substr('menu-item-'.length, id.length);
+                    if(history.pushState) {
+                        history.pushState(null, null, newHash);
+                    }
+                    else {
+                        location.hash = newHash;
+                    }
                 });
+
+                var currentHash = window.location.hash;
+                if(currentHash !== '') {
+                    currentHash = currentHash.substr(1, currentHash.length);
+                    $('#menu-items li').removeClass('pure-menu-selected');
+                    $('#menu-item-' + currentHash).addClass('pure-menu-selected');
+                }
 
                 $('nav').localScroll({
                     duration: 600
