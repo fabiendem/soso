@@ -397,7 +397,7 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 /* Until 740px, there is not enough space to show the contact icons */
-@media screen and (max-width: 780px){
+@media screen and (max-width: 790px){
     .contact-icons {
         display: none;
     }
