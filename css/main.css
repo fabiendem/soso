@@ -332,7 +332,7 @@ p.squeezer {
 /*portfolio pdf*/
 .download-portfolio {
     position: fixed;
-    bottom: 55%;
+    bottom: 50%;
     right: 0;
     width: auto;
     background-color: rgba(245, 182, 0, 0.65);
