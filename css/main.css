@@ -336,7 +336,7 @@ p.squeezer {
     right: 0;
     width: auto;
     background-color: rgba(245, 182, 0, 0.65);
-    padding: 10px 10px 9px 17px;
+    padding: 5px 14px 4px 17px;
     border-top-left-radius: 5px;
     -webkit-border-top-left-radius: 5px;
     -moz-border-top-left-radius: 5px;
@@ -356,7 +356,7 @@ p.squeezer {
 
 .download-portfolio:hover{
     background-color: rgba(255, 197, 31, 0.65);
-    padding-right: 17px;
+    padding-right: 22px;
 }
 
 
