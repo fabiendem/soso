@@ -329,6 +329,58 @@ p.squeezer {
     vertical-align: middle;
 }
 
+/*portfolio pdf*/
+.download-portfolio {
+    position: fixed;
+    bottom: 55%;
+    right: 0;
+    width: auto;
+    background-color: rgba(245, 182, 0, 0.65);
+    padding: 10px 10px 9px 17px;
+    border-top-left-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-bottom-left-radius: 5px;
+    box-shadow: -1px 1px 3px rgba(40, 92, 102, 0.20);
+    -webkit-box-shadow: -1px 1px 3px rgba(40, 92, 102, 0.20);
+    -moz-box-shadow: -1px 1px 3px rgba(40, 92, 102, 0.20);
+    -ms-box-shadow: -1px 1px 3px rgba(40, 92, 102, 0.20);
+    -o-box-shadow: -1px 1px 3px rgba(40, 92, 102, 0.20);
+    transition: padding 0.2s linear;
+    -webkit-transition: padding 0.2s linear;
+    -moz-transition: padding 0.2s linear;
+    -o-transition: padding 0.2s linear;
+}
+
+.download-portfolio:hover{
+    background-color: rgba(255, 197, 31, 0.65);
+    padding-right: 17px;
+}
+
+
+.download-portfolio div{
+    font-weight: bolder;
+    margin-right: 2px;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.icon-download {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+
+.download-text p {
+    margin: 0;
+    font-weight: bold;
+    font-size: small;
+    color: #fff;
+}
+
 /*slider*/
 /*left*/
 .mfp-arrow-left:before,
