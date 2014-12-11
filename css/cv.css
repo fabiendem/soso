@@ -384,7 +384,7 @@ a {
 
 .download {
 	position: fixed;
-	bottom: 55%;
+	bottom: 50%;
 	right: 0;
 	width: auto;
 	background-color: rgba(102, 171, 197, 0.65);
