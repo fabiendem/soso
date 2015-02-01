@@ -132,7 +132,7 @@ hr {
     width: 100%;
     background-image: url('../assets/site_doodle.png');
     background-repeat: no-repeat;
-    background-position: 46% 50%;
+    background-position: 43% 50%;
     background-size: 80%;
 }
 
@@ -538,6 +538,8 @@ only screen and (                min-resolution: 2dppx) {
     #doodle {
         background-image: url('../assets/mobile_doodle.png');
         top: 0px;
+        background-position: 48% 50%;
+        background-size: 100%;
     }
 
      #about, #portfolio {
