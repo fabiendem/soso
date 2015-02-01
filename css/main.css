@@ -532,7 +532,7 @@ only screen and (                min-resolution: 2dppx) {
 @media screen and (max-width: 625px){
     /*Push down main section*/
     main {
-        margin-top: 75px;
+        margin-top: 30px;
     }
 
     #doodle {
