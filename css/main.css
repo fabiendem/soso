@@ -6,14 +6,17 @@ html, button, input, select, textarea,
     -webkit-font-smoothing: antialiased;
 }
 
-body {
+body,
+main {
     background-color: #f5f5f5;
     background-image: url('../assets/groovepaper-orange.png');
     background-size: 300px 300px;
     background-repeat: repeat;
-    color: #2D5E72;
 }
 
+body {
+    color: #2D5E72;
+}
 
 h2,
 h3 {
@@ -41,6 +44,11 @@ h3 {
     font-size: 16px;
     vertical-align: sub;
     color: #4D7E91;
+}
+
+header {
+    -webkit-box-shadow: 10px 0px 10px #888888; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+    box-shadow: 10px 0px 10px #888888;
 }
 
 .pure-menu.pure-menu-open.pure-menu-horizontal a.pure-menu-heading {
@@ -109,11 +117,75 @@ h3 {
 }
 
 hr {
-
     border: 0;
     height: 0;
     border-top: 1px solid rgba(233, 233, 233, 1);
 }
+
+#doodle {
+    position: fixed;
+    z-index: 5;
+    top: 50px;
+    left: 0;
+    right: 0;
+    height: 92vh;
+    width: 100%;
+    background-image: url('../assets/site_doodle.png');
+    background-repeat: no-repeat;
+    background-position: 46% 50%;
+    background-size: 80%;
+}
+
+main {
+    position: relative;
+    z-index: 8;
+    top: 92vh;
+    margin-top: 50px;
+    border-top: 15px solid #ffffff;
+    -webkit-box-shadow:  0px -10px 10px 0px rgba(165, 165, 165, 0.3);
+    box-shadow:  0px -10px 10px 0px rgba(165, 165, 165, 0.3);
+    /* Force GPU rendering for iOS otherwise you get glitches when scrolling*/
+    -webkit-transform: translate3d(0,0,0);
+}
+
+/*
+    Fix vh support on iOS7
+*/
+/** 
+ * iPad with portrait orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+    #doodle {
+        height: 942px;
+    }
+    main {
+        top: 942px;
+    }
+}
+/** 
+ * iPad with landscape orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+    #doodle {
+        height: 707px;
+    }
+    main {
+        top: 707px;
+    }
+}
+/**
+ * iPhone 5
+ * You can also target devices with aspect ratio.
+ */
+@media screen and (device-aspect-ratio: 40/71) {
+    #doodle {
+        height: 589px;
+    }
+    main {
+        top: 589px;
+    }
+}
+
 
 #gallery {
     margin-bottom: 40px;
@@ -165,10 +237,6 @@ hr {
     -o-filter: none;
 }
 
-main {
-	margin-top: 50px;
-}
-
 #gallery {
     margin-bottom: 2em;
 }
@@ -194,7 +262,7 @@ So the menu does not hide the section when you click on about
  #about, #portfolio {
     display: block;
     position: relative;
-    top: -66px;
+    top: -35px;
     visibility: hidden;
 }
 
@@ -332,6 +400,7 @@ p.squeezer {
 /*portfolio pdf*/
 .download-portfolio {
     position: fixed;
+    z-index: 15;
     bottom: 50%;
     right: 0;
     width: auto;
@@ -446,6 +515,10 @@ only screen and (                min-resolution: 2dppx) {
     body {
         background-image: url('../assets/groovepaper-orange@2x.png');
     }
+
+    #doodle {
+        background-image: url('../assets/site_doodle@2x.png');
+    }
 }
 
 /* Until 740px, there is not enough space to show the contact icons */
@@ -460,6 +533,29 @@ only screen and (                min-resolution: 2dppx) {
     /*Push down main section*/
     main {
         margin-top: 75px;
+    }
+
+    #doodle {
+        background-image: url('../assets/mobile_doodle.png');
+        top: 0px;
+    }
+
+     #about, #portfolio {
+        top: -100px;
+     }
+}
+
+/* Mobile retina */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 625px),
+only screen and (   min--moz-device-pixel-ratio: 2) and (max-width: 625px),
+only screen and (     -o-min-device-pixel-ratio: 2/1) and (max-width: 625px),
+only screen and (        min-device-pixel-ratio: 2) and (max-width: 625px),
+only screen and (                min-resolution: 192dpi) and (max-width: 625px),
+only screen and (                min-resolution: 2dppx) and (max-width: 625px) {
+
+    #doodle {
+        background-image: url('../assets/mobile_doodle@2x.png');
     }
 }
 
@@ -498,5 +594,17 @@ break line after my photo
     ul#menu-items {
         margin-left: 5px;
     }
+}
 
+/* 
+Until 301px, menu is on 3 lines
+*/
+@media screen and (max-width: 301px){
+    #doodle {
+        top: 0;
+    }
+
+    #about, #portfolio {
+        top: -80px;
+    }
 }
