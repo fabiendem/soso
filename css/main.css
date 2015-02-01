@@ -43,12 +43,12 @@ h3 {
 .icon-colibri2 {
     font-size: 16px;
     vertical-align: sub;
-    color: #4D7E91;
+    color: #36464e;
 }
 
 header {
-    -webkit-box-shadow: 10px 0px 10px #888888; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
-    box-shadow: 10px 0px 10px #888888;
+    -webkit-box-shadow: 10px 0px 5px #C7C7C7; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+    box-shadow: 10px 0px 5px #C7C7C7;
 }
 
 .pure-menu.pure-menu-open.pure-menu-horizontal a.pure-menu-heading {
@@ -72,7 +72,8 @@ header {
 .pure-menu a,
 .pure-menu .pure-menu-heading {
     white-space: normal;
-    color: #4D7E91;
+    color: #36464e;
+    font-family: 'Oswald', sans-serif;
 }
 
 .pure-menu .pure-menu-selected a {
@@ -101,11 +102,11 @@ header {
     display: inline-block;
     font-size: 1.5em;
     padding: 6px 4px;
-    color: #4D7E91;
+    color: #36464e;
 }
 
 .contact-icons a:hover {
-    color: #649EB4;
+    color: #536d79;
 }
 
 .header-fixed {
@@ -141,9 +142,9 @@ hr {
     z-index: 8;
     top: 92vh;
     margin-top: 50px;
-    border-top: 15px solid #ffffff;
-    -webkit-box-shadow:  0px -10px 10px 0px rgba(165, 165, 165, 0.3);
-    box-shadow:  0px -10px 10px 0px rgba(165, 165, 165, 0.3);
+    border-top: 20px solid #ffffff;
+    -webkit-box-shadow:  0px -2px 4px 0px rgba(165, 165, 165, 0.3);
+    box-shadow:  0px -2px 4px 0px rgba(165, 165, 165, 0.3);
     /* Force GPU rendering for iOS otherwise you get glitches when scrolling*/
     -webkit-transform: translate3d(0,0,0);
 }
