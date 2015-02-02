@@ -1,7 +1,7 @@
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
     /* Set your content font stack here: */
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Roboto', sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
@@ -15,13 +15,13 @@ body,
 body {
     color: #253137;
     background-color: #FFBF15;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 20px;
 }
 
 h2 {
     color: #0096a6;
-    font-size: 1.3em;
+    font-size: 1.6em;
 }
 
 h2,
@@ -32,8 +32,8 @@ h3 {
 }
 
 h3 {
-    color: #36464e;
-    margin-bottom: 0;
+    margin-bottom: 10px;
+    font-size: 1.4em;
 }
 
 
@@ -312,6 +312,7 @@ So the menu does not hide the section when you click on about
 .date {
     color: #36464e;
     font-weight: bold;
+    margin-right: 10px;
 }
 
 .work-done {
@@ -329,7 +330,7 @@ So the menu does not hide the section when you click on about
 }
 
 .contact h2 {
-    margin: 10px 0 1em;
+    margin: 13px 0 1em;
     display: inline-block;
     vertical-align: top;
 }
@@ -348,6 +349,7 @@ div.icon-contact {
     margin-bottom: 9px;
     line-height: 1.3em;
 }
+
 
 .about p a,
 .work-done li a,
@@ -398,6 +400,7 @@ footer {
     background-color: #fdfdfd;
     text-align: left;
     font-size: 16px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 footer a {
