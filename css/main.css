@@ -8,21 +8,32 @@ html, button, input, select, textarea,
 
 body,
 #home {
-    background-color: #FCF9F1;
-    /*background-image: url('../assets/groovepaper-orange.png');*/
     background-size: 300px 300px;
     background-repeat: repeat;
 }
 
 body {
     color: #253137;
+    background-color: #FFBF15;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+h2 {
+    color: #0096a6;
+    font-size: 1.3em;
 }
 
 h2,
 h3 {
-    color: #0D6A90;
     font-family: 'Reenie Beanie', cursive;
-    font-weight: bolder;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #36464e;
+    margin-bottom: 0;
 }
 
 
@@ -150,6 +161,7 @@ hr {
 }
 
 #home {
+    background-color: rgb(255, 255, 253);
     position: relative;
     z-index: 8;
     top: 92vh;
@@ -286,13 +298,12 @@ So the menu does not hide the section when you click on about
 }
 
 .about h2 {
-    font-size: 1.17em;
     margin: 1em 0;
 }
 
 .about-img {
     float: left;
-    margin-right: 1.6em;
+    margin-right: 0.6em;
     max-width: 100px;
     opacity: 0.85;
     height: auto;
@@ -304,6 +315,7 @@ So the menu does not hide the section when you click on about
 }
 
 .work-done {
+    margin-top: 5px;
     padding: 0;
 }
 
@@ -317,7 +329,6 @@ So the menu does not hide the section when you click on about
 }
 
 .contact h2 {
-    font-size: 1.17em;
     margin: 10px 0 1em;
     display: inline-block;
     vertical-align: top;
@@ -326,7 +337,7 @@ So the menu does not hide the section when you click on about
 div.icon-contact {
     font-size: 45px;
     margin: 0 8px;
-    color: #0D6A90;
+    color: #0096a6;
     padding: 0 10px 0 0;
     display: inline-block;
 }
@@ -343,13 +354,13 @@ div.icon-contact {
 .contact p a {
     color: #253137;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .about p a:hover,
 .work-done li a:hover,
 .contact p a:hover {
-    color: #536d79;
+    color: #0096a6;
 }
 
 .contact p a.icon-tumblr,
@@ -361,13 +372,14 @@ div.icon-contact {
     font-size: 1.3em;
     text-decoration: none;
     padding-right: 5px;
+    font-weight: normal;
 }
 
 .contact p a.icon-tumblr:hover,
 .contact p a.icon-email:hover,
 .contact p a.icon-linkdn:hover,
 .contact p a.icon-cv:hover {
-    color: #536d79;
+    color: #0096a6;
 }
 
 .contact-script {
@@ -379,23 +391,34 @@ footer {
 	padding: 20px 20px 50px 20px;
 }
 
+/*footer*/
+
 footer {
     border-top: #E9E9E9 1px solid;
     background-color: #fdfdfd;
-    font-family: 'Reenie Beanie', cursive;
     text-align: left;
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 16px;
 }
 
 footer a {
-    color: #36464e;
+    color: #253137;
     text-decoration: none;
-    font-weight: bolder;
+    font-weight: bold;
 }  
 
 footer a:hover {
-    color: #536d79;
+    color: #0096a6;
+}
+
+p.title-footer {    
+    font-family: 'Reenie Beanie', cursive;   
+    font-weight: bold;
+    margin: 2px 0;
+    color: #36464e;
+}  
+
+.icon-colibri2.icon-footer {
+    color: #36464e;
 }
 
 p.rights {
@@ -461,7 +484,6 @@ p.squeezer {
 .download-text p {
     margin: 0;
     font-weight: bold;
-    font-size: small;
     color: #fff;
 }
 
@@ -527,10 +549,6 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
     /* Retina-specific stuff here */
-    body {
-/*        background-image: url('../assets/groovepaper-orange@2x.png');
-*/    }
-
     #doodle {
         background-image: url('../assets/site_doodle@2x.png');
     }
@@ -540,6 +558,9 @@ only screen and (                min-resolution: 2dppx) {
 @media screen and (max-width: 790px){
     .contact-icons {
         display: none;
+    }
+    h2 {
+        line-height: 1.2em;
     }
 }
 
@@ -552,9 +573,9 @@ only screen and (                min-resolution: 2dppx) {
 
     #doodle {
         background-image: url('../assets/mobile_doodle.png');
-        top: 0%;
+        top: 1%;
         background-position: 50% 50%;
-        background-size: 85%;
+        background-size: 80%;
     }
 
      #about, #portfolio {
@@ -590,11 +611,28 @@ only screen and (                min-resolution: 2dppx) and (max-width: 625px) {
 
 /* Until 490px stick the contacts details under the icon and title*/
 @media screen and (max-width: 490px){   
+    .about {
+        margin-right: 1em;
+    }
+
+    .contact {
+        margin-right: 0;
+    }
+
     span.icon-contact {
         margin: 0 10px 0 0;
     }
+    h2 {
+        font-size: 1.2em; 
+        line-height: 1.2em;
+    }
+
+    div.icon-contact {
+        font-size: 35px;
+        margin: 0 8px;
+    }
     .contact p {
-        margin: 15px 0 0;
+        margin: 5px 0 0;
     }
 }
 
@@ -612,6 +650,11 @@ break line after my photo
     .icon-colibri2 {
         display: none;
     }
+
+    .icon-colibri2.icon-footer {
+        display: inline-block;
+    }
+
     .pure-menu.pure-menu-open.pure-menu-horizontal a.pure-menu-heading {
         padding-left: 0;
     }
