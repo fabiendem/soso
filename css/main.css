@@ -8,19 +8,21 @@ html, button, input, select, textarea,
 
 body,
 #home {
-    background-color: #f5f5f5;
-    background-image: url('../assets/groovepaper-orange.png');
+    background-color: #FCF9F1;
+    /*background-image: url('../assets/groovepaper-orange.png');*/
     background-size: 300px 300px;
     background-repeat: repeat;
 }
 
 body {
-    color: #2D5E72;
+    color: #253137;
 }
 
 h2,
 h3 {
-    color: #4D7E91;
+    color: #0D6A90;
+    font-family: 'Reenie Beanie', cursive;
+    font-weight: bolder;
 }
 
 
@@ -42,7 +44,7 @@ h3 {
 
 .icon-colibri2 {
     font-size: 16px;
-    vertical-align: sub;
+    vertical-align: top;
     color: #36464e;
 }
 
@@ -62,27 +64,32 @@ header {
 }
 
 .pure-menu.pure-menu-open {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
     background-color: #fdfdfd;
     border-bottom: #E9E9E9 1px solid;
     padding: 4px 0 4px 10px;
 }
 
+.sonial {    
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 18px!important;
+    font-weight: bold;
+}
+
 .pure-menu a,
 .pure-menu .pure-menu-heading {
     white-space: normal;
-    color: #36464e;
-    font-family: 'Oswald', sans-serif;
+    color: #36464e;    
+    font-size: 100%;
 }
 
+
 .pure-menu .pure-menu-selected a {
-    color: #3D6474;
+    color: #0D6A90;
 }
 
 .pure-menu li a {
     padding: 0 10px 0 10px;
-    color: #89A1A8;
+    color: #0A8ABE;
 }
 
 .pure-menu li a:hover {
@@ -287,7 +294,7 @@ So the menu does not hide the section when you click on about
 }
 
 .date {
-    color: #4D7E91;
+    color: #36464e;
     font-weight: bold;
 }
 
@@ -314,7 +321,7 @@ So the menu does not hide the section when you click on about
 div.icon-contact {
     font-size: 45px;
     margin: 0 8px;
-    color: #4D7E91;
+    color: #0D6A90;
     padding: 0 10px 0 0;
     display: inline-block;
 }
@@ -329,21 +336,22 @@ div.icon-contact {
 .about p a,
 .work-done li a,
 .contact p a {
-    color: #649EB4;
+    color: #253137;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .about p a:hover,
 .work-done li a:hover,
 .contact p a:hover {
-    color: #4D7E91;
+    color: #536d79;
 }
 
 .contact p a.icon-tumblr,
 .contact p a.icon-email,
 .contact p a.icon-linkdn,
 .contact p a.icon-cv {
-    color: #4D7E91;
+    color: #36464e;
     vertical-align: text-bottom;
     font-size: 1.3em;
     text-decoration: none;
@@ -354,7 +362,7 @@ div.icon-contact {
 .contact p a.icon-email:hover,
 .contact p a.icon-linkdn:hover,
 .contact p a.icon-cv:hover {
-    color: #649EB4;
+    color: #536d79;
 }
 
 .contact-script {
@@ -369,19 +377,20 @@ footer {
 footer {
     border-top: #E9E9E9 1px solid;
     background-color: #fdfdfd;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Reenie Beanie', cursive;
     text-align: left;
     font-size: 12px;
+    font-weight: bold;
 }
 
 footer a {
-    color: #4D7E91;
+    color: #36464e;
     text-decoration: none;
     font-weight: bolder;
 }  
 
 footer a:hover {
-    color: #649EB4;
+    color: #536d79;
 }
 
 p.rights {
@@ -514,8 +523,8 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
     /* Retina-specific stuff here */
     body {
-        background-image: url('../assets/groovepaper-orange@2x.png');
-    }
+/*        background-image: url('../assets/groovepaper-orange@2x.png');
+*/    }
 
     #doodle {
         background-image: url('../assets/site_doodle@2x.png');

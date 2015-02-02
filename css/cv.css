@@ -26,7 +26,7 @@ a {
 	text-transform: uppercase;
 	margin-bottom: 2px;
 	margin-top: 20px;
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Poiret One', cursive;
 }
 
 .job-cv {
@@ -34,7 +34,7 @@ a {
 	color: #E2A100;
 	margin-top: 0;
 	margin-bottom: 5px;
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Poiret One', cursive;
 }
 
 .subtitle-cv {
@@ -69,11 +69,11 @@ a {
 }
 
 .contact-cv li a {
-	color: #4D7E91; 
+	color: #36464e; 
 }
 
 .contact-cv li a:hover {
-	color: #649EB4; 
+	color: #536d79; 
 }
 
 /*end header*/
@@ -86,7 +86,7 @@ a {
 	padding-left: 1.8em;
 	padding-right: 4.8em;
 	line-height: 25px;
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Poiret One', cursive;
 }
 
 
@@ -95,13 +95,13 @@ a {
 .job-title {
 	margin:0;
 	font-size: 15px;
-	color: #2D5E72;
+	color: #36464e;
 }
 
 .job-location {
 	margin: 0;
 	font-size: 15px;
-	color: #2D5E72;
+	color: #36464e;
 	font-weight: normal;
 }
 
@@ -113,7 +113,7 @@ a {
 	-o-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
 	box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
 	font-size: 14px;
-	color: #4D7E91;
+	color: #36464e;
 	padding: 12px 16px 12px 12px;
 	margin-bottom: 10px;
 	max-width: 410px;
@@ -134,7 +134,7 @@ a {
 }
 
 .job-now li a{
-	color: #4D7E91;
+	color: #36464e;
 }
 
 #skills,
@@ -169,7 +169,7 @@ a {
 	position: absolute;
 	top: 10px;
 	right: 7px;
-	color: #4D7E91;
+	color: #36464e;
 	font-weight: bolder;
 	display: inline-block;
 	font-size: 14px;
