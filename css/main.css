@@ -1,7 +1,7 @@
 html, button, input, select, textarea,
 .pure-g [class *= "pure-u"] {
     /* Set your content font stack here: */
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
@@ -44,8 +44,8 @@ h3 {
 
 .icon-colibri2 {
     font-size: 16px;
-    vertical-align: top;
-    color: #36464e;
+    vertical-align: middle;
+    color: #0096a6;
 }
 
 header {
@@ -54,13 +54,14 @@ header {
 }
 
 .pure-menu.pure-menu-open.pure-menu-horizontal a.pure-menu-heading {
-    padding-left: 6px;
+    padding-left: 2px;
     padding-right: 0;
 }
 
 
 #menu-items {
     margin-left: 10px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 .pure-menu.pure-menu-open {
@@ -71,30 +72,34 @@ header {
 
 .sonial {    
     font-family: 'Reenie Beanie', cursive;
-    font-size: 18px!important;
+    font-size: 20px!important;
     font-weight: bold;
 }
 
 .pure-menu a,
 .pure-menu .pure-menu-heading {
     white-space: normal;
-    color: #36464e;    
+    color: #253137;    
     font-size: 100%;
 }
 
 
 .pure-menu .pure-menu-selected a {
-    color: #0D6A90;
+    color: #253137;
+    font-size: 18px!important;
+    font-weight: 700;   
 }
+
 
 .pure-menu li a {
     padding: 0 10px 0 10px;
-    color: #0A8ABE;
+    color: #36464e;
+    font-size: 18px!important;
 }
 
 .pure-menu li a:hover {
     background: transparent;
-    color: #649EB4; 
+    color: #0096a6; 
 }
 
 .contact-icons {
@@ -109,11 +114,11 @@ header {
     display: inline-block;
     font-size: 1.5em;
     padding: 6px 4px;
-    color: #36464e;
+    color: #0096a6;
 }
 
 .contact-icons a:hover {
-    color: #536d79;
+    color: #00abc0;
 }
 
 .header-fixed {
@@ -140,7 +145,7 @@ hr {
     width: 100%;
     background-image: url('../assets/site_doodle.png');
     background-repeat: no-repeat;
-    background-position: 43% 50%;
+    background-position: 40% 50%;
     background-size: 80%;
 }
 
@@ -548,7 +553,7 @@ only screen and (                min-resolution: 2dppx) {
     #doodle {
         background-image: url('../assets/mobile_doodle.png');
         top: 0px;
-        background-position: 48% 50%;
+        background-position: 50% 50%;
         background-size: 100%;
     }
 
