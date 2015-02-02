@@ -105,7 +105,7 @@ header {
 .contact-icons {
     display: inline-block; 
     position: absolute;
-    bottom: -5px;
+    bottom: -1px;
     right: 0; 
     margin-right: 20px;
 }
@@ -552,9 +552,9 @@ only screen and (                min-resolution: 2dppx) {
 
     #doodle {
         background-image: url('../assets/mobile_doodle.png');
-        top: 0px;
+        top: 0%;
         background-position: 50% 50%;
-        background-size: 100%;
+        background-size: 85%;
     }
 
      #about, #portfolio {
@@ -575,6 +575,18 @@ only screen and (                min-resolution: 2dppx) and (max-width: 625px) {
         background-image: url('../assets/mobile_doodle@2x.png');
     }
 }
+
+/* Until 535px align left "sonia lahcene graphic design" and menu items*/
+@media screen and (max-width: 534px){   
+    #menu-items {
+        margin-left: 19px;
+    }
+
+    .pure-menu-heading.sonial {
+        padding-bottom: 0;
+    }
+}
+
 
 /* Until 490px stick the contacts details under the icon and title*/
 @media screen and (max-width: 490px){   
@@ -605,7 +617,7 @@ break line after my photo
     }
 
     a.pure-menu-heading.sonial {
-        padding-left: 1em!important;
+        padding: 5px 15px 0px !important;
     }
 
     ul#menu-items {
