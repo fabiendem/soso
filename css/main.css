@@ -506,6 +506,33 @@ p.squeezer {
     color: #fff;
 }
 
+/* 
+    =======================
+    Open gallery with fade effect
+    =======================
+*/
+.mfp-fade-in .mfp-with-anim {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.mfp-fade-in.mfp-bg {
+  opacity: 0;
+  transition: all 0.6s ease-out;
+}
+.mfp-fade-in.mfp-ready .mfp-with-anim {
+  opacity: 1;
+}
+.mfp-fade-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+.mfp-fade-in.mfp-removing .mfp-with-anim {
+  opacity: 0;
+}
+.mfp-fade-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+
 /*slider*/
 /*left*/
 .mfp-arrow-left:before,

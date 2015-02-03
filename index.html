@@ -329,6 +329,15 @@
                         },
                         retina: {
                             ratio: 2
+                        },
+                        removalDelay: 500,
+                        callbacks: {
+                            beforeOpen: function() {
+                                var self = this;
+                                // just a hack that adds mfp-anim class to markup 
+                                self.st.image.markup = self.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+                                self.st.mainClass = self.st.el.attr('data-effect');
+                            }
                         }
                     });
                 });
