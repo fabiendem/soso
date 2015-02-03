@@ -333,30 +333,42 @@
                     });
                 });
 
-                // Menu classes when selected
-                $('#menu-items li').click(function () {
-                    var $this = $(this);
-                    $('#menu-items li').removeClass('pure-menu-selected');
-                    $this.addClass('pure-menu-selected');
 
-                    // Update Hash in the url
-                    var id = $this.attr('id');
-                    var newHash = '#' + id.substr('menu-item-'.length, id.length);
+                var updateHash = function(newHash) {
                     if(history.pushState) {
                         history.pushState(null, null, newHash);
                     }
                     else {
                         location.hash = newHash;
                     }
+                };
+
+                var highlightMenuItem = function($menuItem) {
+                    $('#menu-items li').removeClass('pure-menu-selected');
+                    $($menuItem).addClass('pure-menu-selected');
+                };
+
+                // Menu classes when clicked
+                $('#menu-items li').click(function () {
+                    // Set the class on the clicked item and remove on the others
+                    var $this = $(this);
+                    highlightMenuItem($this);
+                    
+                    // Update Hash in the url
+                    var id = $this.attr('id');
+                    var newHash = '#' + id.substr('menu-item-'.length, id.length);
+                    updateHash(newHash);
                 });
 
+
+                // When loading from a hash, highlight the corresponding one
                 var currentHash = window.location.hash;
                 if(currentHash !== '') {
                     currentHash = currentHash.substr(1, currentHash.length);
-                    $('#menu-items li').removeClass('pure-menu-selected');
-                    $('#menu-item-' + currentHash).addClass('pure-menu-selected');
+                    highlightMenuItem($('#menu-item-' + currentHash));
                 }
 
+                // Apply local smooth scrolling
                 $('nav').localScroll({
                     duration: 600
                 });
