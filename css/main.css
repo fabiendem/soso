@@ -294,6 +294,16 @@ img.mfp-img {
         padding: 0.8em;
  }
 
+/*description picture in slider*/
+.mfp-bottom-bar {
+    margin-top: -27px;
+    background: rgba(0,0,0,0.4);
+    padding: 20px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 18px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
 /*
 Special anchor for the portfolio/about section on a mobile
 So the menu does not hide the section when you click on about
@@ -318,9 +328,9 @@ So the menu does not hide the section when you click on about
 .about-img {
     float: left;
     margin-right: 0.6em;
-    max-width: 100px;
     opacity: 0.85;
     height: auto;
+    max-width: 150px;
 }
 
 .date {
