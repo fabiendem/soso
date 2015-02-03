@@ -27,7 +27,7 @@ a {
 .name-cv {
 	font-weight: 400;
 	text-transform: uppercase;
-	margin-bottom: 10px;
+	margin-bottom: 11px;
 	margin-top: 20px;
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 }
@@ -36,24 +36,28 @@ a {
 	font-weight: 400;
 	color: #FFBF15;
 	margin-top: 0;
-	margin-bottom: 10px;
+	margin-bottom: 12px;
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 .subtitle-cv {
 	font-weight: 100;
 	margin: 1px 0 1px 0;
-	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
 }
 
 /*contact CV*/
 
 .contact-cv {
+	font-family: 'Roboto', sans-serif;
+	font-size: 15px;
 	list-style: none;
 	display: inline-block;
 	padding-left: 0;
 	float: right;
 	margin-right: 33px;
+	margin-top: 25px;
 }
 
 .contact-cv li {
@@ -62,7 +66,7 @@ a {
 
 .contact-cv li span {
 	font-size: 1.5em;
-	padding-right: 15px;
+	padding-right: 10px;
 	color: #FFBF15;
 	vertical-align: middle;
 }
@@ -207,19 +211,19 @@ a {
 }
 
 .good {
-	color: #023144;
+	color: #00828e;
 }
 
 .goodbis {
-	color: rgba(7, 78, 107, 0.85);
+	color: #0096a6;
 }
 
 .average {
-	color: rgba(7, 78, 107, 0.75);
+	color: #4ccfe0;
 }
 
 .debutant{
-	color: rgba(7, 78, 107, 0.45);
+	color: #b1eaf1;
 }
 
 /*--work--*/
