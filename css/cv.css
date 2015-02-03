@@ -83,6 +83,7 @@ a {
 
 #summary-cv {
 	max-width: 1245px;
+	margin-top: 20px;
 }
 
 #summary-cv div p {
@@ -173,15 +174,14 @@ a {
 	position: absolute;
 	top: 10px;
 	right: 7px;
-	color: #36464e;
 	font-weight: bolder;
 	display: inline-block;
-	font-size: 14px;
+	font-size: 15px;
 	background-color: rgba(190, 145, 1, 0.12);
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
-	padding: 1px 4px;
+	padding: 1px 7px;
 }
 
 /*--skills--*/
@@ -434,7 +434,6 @@ a {
 .download-text p {
 	margin: 0;
 	font-weight: bold;
-	font-size: small;
 	color: #fff;
 }
 
