@@ -376,6 +376,35 @@
                 $('nav').localScroll({
                     duration: 600
                 });
+
+                var $imageGrid = $('#image-grid');
+                $imageGrid.shuffle({
+                    itemSelector: '.image-block'
+                });
+
+                var $filterOptions = $('.filter-options');
+                // Set up button clicks
+                var setupFilters = function() {
+                    var $btns = $filterOptions.children();
+                    $btns.on('click', function() {
+                        var $this = $(this),
+                        isActive = $this.hasClass( 'active' ),
+                        group = isActive ? 'all' : $this.data('group');
+
+                        // Hide current label, show current label in title
+                        if ( !isActive ) {
+                            $('.filter-options .active').removeClass('active');
+                        }
+
+                        $this.toggleClass('active');
+
+                        // Filter elements
+                        $imageGrid.shuffle( 'shuffle', group );
+                    });
+                    $btns = null;
+                };
+
+                setupFilters();
             });
         </script>
 
