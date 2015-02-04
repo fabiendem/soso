@@ -240,8 +240,8 @@ figcaption {
     line-height: 17px;
 }
 
-#gallery {
-    margin-bottom: 40px;
+.image-grid {
+    margin-bottom: 2em;
 }
 
 .keep-ratio {
@@ -299,10 +299,6 @@ figcaption {
     -o-filter: none;
 }
 
-#gallery {
-    margin-bottom: 2em;
-}
-
 img.mfp-img {
     width: auto !important;
     max-width: 100% !important;
@@ -339,8 +335,6 @@ img.mfp-img {
     margin-right: 8px;
     margin-left: 2px;
 }
-
-
 
 /*
 Special anchor for the portfolio/about section on a mobile
