@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?mly0g2');
-	src:url('fonts/icomoon.eot?#iefixmly0g2') format('embedded-opentype'),
-		url('fonts/icomoon.woff?mly0g2') format('woff'),
-		url('fonts/icomoon.ttf?mly0g2') format('truetype'),
-		url('fonts/icomoon.svg?mly0g2#icomoon') format('svg');
+	src:url('fonts/icomoon.eot?-tflotx');
+	src:url('fonts/icomoon.eot?#iefix-tflotx') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-tflotx') format('woff'),
+		url('fonts/icomoon.ttf?-tflotx') format('truetype'),
+		url('fonts/icomoon.svg?-tflotx#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -26,27 +26,40 @@
 .icon-download:before {
 	content: "\e608";
 }
-.icon-website:before {
-	content: "\e607";
+
+.icon-info:before {
+	content: "\e609";
 }
+
 .icon-cv:before {
 	content: "\e603";
 }
+
+.icon-website:before {
+	content: "\e607";
+}
+
 .icon-tumblr:before {
 	content: "\e606";
 }
+
 .icon-contact:before {
 	content: "\e605";
 }
+
 .icon-colibri2:before {
 	content: "\e604";
 }
+
 .icon-squeezer:before {
 	content: "\e602";
 }
+
 .icon-email:before {
 	content: "\e600";
 }
+
 .icon-linkdn:before {
 	content: "\e601";
 }
+

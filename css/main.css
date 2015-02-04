@@ -208,16 +208,25 @@ hr {
     }
 }
 
+.tag {
+    margin-left: 1em;
+}
+
 .category-title {
     display: inline-block;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-weight: bold;
     background-color: #FFBF15;
     font-size: 20px;
-    margin: 2em 0 0.5em 1em;
+    margin: 2em 0.2em 1.5em 0;
     color: white;
-    padding: 4px 7px;
+    padding: 7px 9px 3px;
 }
+
+.category-title:hover {
+    background-color: #FFD35C;
+}
+
 
 .thumbnail-caption {
     font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -294,15 +303,30 @@ img.mfp-img {
         padding: 0.8em;
  }
 
-/*description picture in slider*/
+/*description caption picture in slider*/
 .mfp-bottom-bar {
     margin-top: -27px;
-    background: rgba(0,0,0,0.4);
-    padding: 20px;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 18px;
-    border: 1px solid rgb(255, 255, 255);
 }
+/*links in caption*/
+.mfp-title a {
+    color: #00abc0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.mfp-title a:hover {
+    color: #44C2D2;
+}
+
+.icon-info {
+    color: #FFBF15;
+    margin-right: 8px;
+    margin-left: 2px;
+}
+
+
 
 /*
 Special anchor for the portfolio/about section on a mobile
