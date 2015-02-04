@@ -228,6 +228,11 @@ hr {
     background-color: #FFD35C;
 }
 
+/* When a category is selected */
+.category-title.active {
+    background-color: #6CF4FF;
+}
+
 figcaption {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     color: #0096a6;
