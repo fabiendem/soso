@@ -221,14 +221,14 @@ hr {
     margin: 2em 0.2em 1.5em 0;
     color: white;
     padding: 7px 9px 3px;
+    cursor: pointer;
 }
 
 .category-title:hover {
     background-color: #FFD35C;
 }
 
-
-.thumbnail-caption {
+figcaption {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     color: #0096a6;
     margin-top: 6px;
@@ -237,6 +237,15 @@ hr {
 
 #gallery {
     margin-bottom: 40px;
+}
+
+.keep-ratio {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 100%;
 }
 
 .thumbnail {
@@ -680,7 +689,7 @@ only screen and (                min-resolution: 2dppx) and (max-width: 625px) {
 
 /* Until 535px align left "sonia lahcene graphic design" and menu items*/
 @media screen and (max-width: 567px){   
-    .thumbnail-caption {
+    figcaption {
         text-align: center;
     }
 }
