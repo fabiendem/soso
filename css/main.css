@@ -209,7 +209,7 @@ hr {
 }
 
 .tag {
-    margin-left: 1em;
+    margin: 2em 0 1.5em 1em;
 }
 
 .category-title {
@@ -218,7 +218,7 @@ hr {
     font-weight: bold;
     background-color: #FFBF15;
     font-size: 20px;
-    margin: 2em 0.2em 1.5em 0;
+    margin: 0.2em 0.2em 0 0;
     color: white;
     padding: 7px 9px 3px;
     cursor: pointer;
@@ -233,18 +233,20 @@ hr {
     background-color: #6CF4FF;
 }
 
-
 .image-grid {
     margin-bottom: 2em;
 }
 
+/* Useful for the shuffle plugin, so it knows how to layout the cards */
 .keep-ratio {
     display: block;
     position: relative;
     width: 100%;
     height: 0;
-    overflow: hidden;
     padding-bottom: 100%;
+    /* Margin under each image block */
+    margin-bottom: 2em;
+    text-decoration: none;
 }
 
 .thumbnail {
@@ -305,13 +307,15 @@ img.mfp-img {
     max-width: 100% !important;
 }
 
-.pure-g > div {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
+.pure-g > div,
+.pure-g > figure {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 .l-box {
-        padding: 0.8em;
+    padding: 0.8em;
  }
 
 /*description caption picture in slider*/
