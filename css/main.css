@@ -230,7 +230,7 @@ hr {
 
 /* When a category is selected */
 .category-title.active {
-    background-color: #6CF4FF;
+    background-color: #00abc0;
 }
 
 .image-grid {
