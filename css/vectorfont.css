@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?-tflotx');
-	src:url('fonts/icomoon.eot?#iefix-tflotx') format('embedded-opentype'),
-		url('fonts/icomoon.woff?-tflotx') format('woff'),
-		url('fonts/icomoon.ttf?-tflotx') format('truetype'),
-		url('fonts/icomoon.svg?-tflotx#icomoon') format('svg');
+	src:url('fonts/icomoon.eot?n2agab');
+	src:url('fonts/icomoon.eot?#iefixn2agab') format('embedded-opentype'),
+		url('fonts/icomoon.woff?n2agab') format('woff'),
+		url('fonts/icomoon.ttf?n2agab') format('truetype'),
+		url('fonts/icomoon.svg?n2agab#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -24,42 +24,42 @@
 }
 
 .icon-download:before {
+	content: "\e600";
+}
+
+.icon-cv:before {
+	content: "\e601";
+}
+
+.icon-website:before {
+	content: "\e602";
+}
+
+.icon-tumblr:before {
+	content: "\e603";
+}
+
+.icon-contact:before {
+	content: "\e604";
+}
+
+.icon-colibri2:before {
+	content: "\e605";
+}
+
+.icon-squeezer:before {
+	content: "\e606";
+}
+
+.icon-email:before {
+	content: "\e607";
+}
+
+.icon-linkdn:before {
 	content: "\e608";
 }
 
 .icon-info:before {
 	content: "\e609";
-}
-
-.icon-cv:before {
-	content: "\e603";
-}
-
-.icon-website:before {
-	content: "\e607";
-}
-
-.icon-tumblr:before {
-	content: "\e606";
-}
-
-.icon-contact:before {
-	content: "\e605";
-}
-
-.icon-colibri2:before {
-	content: "\e604";
-}
-
-.icon-squeezer:before {
-	content: "\e602";
-}
-
-.icon-email:before {
-	content: "\e600";
-}
-
-.icon-linkdn:before {
-	content: "\e601";
 }
 
