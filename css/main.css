@@ -143,7 +143,7 @@ hr {
     border-top: 1px solid rgba(233, 233, 233, 1);
 }
 
-#doodle {
+.doodle {
     position: fixed;
     z-index: 5;
     top: 50px;
@@ -151,10 +151,43 @@ hr {
     right: 0;
     height: 92vh;
     width: 100%;
+}
+
+.doodle-image {
+    position: absolute;
+    z-index: 7;
+    height: 100%;
+    width: 100%;
     background-image: url('../assets/site_doodle.png');
     background-repeat: no-repeat;
     background-position: 40% 50%;
     background-size: 80%;
+}
+
+.doodle-clouds {
+    position: relative;
+    z-index: 6;
+    height: 100%;
+}
+
+.cloud {
+    position: absolute;
+    top: 30%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+}
+
+.cloud-left {
+    width: 8%;
+    left: 19%;
+    background-image: url('../assets/cloud-left.png');
+}
+
+.cloud-right {
+    width: 10.4%;
+    right: 19%;
+    background-image: url('../assets/cloud-right.png');
 }
 
 #home {
@@ -175,7 +208,7 @@ hr {
  * iPad with portrait orientation.
  */
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
-    #doodle {
+    .doodle {
         height: 942px;
     }
     #home {
@@ -186,7 +219,7 @@ hr {
  * iPad with landscape orientation.
  */
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
-    #doodle {
+    .doodle {
         height: 707px;
     }
     #home {
@@ -198,7 +231,7 @@ hr {
  * You can also target devices with aspect ratio.
  */
 @media screen and (device-aspect-ratio: 40/71) {
-    #doodle {
+    .doodle {
         height: 589px;
     }
     #home {
@@ -654,8 +687,16 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
     /* Retina-specific stuff here */
-    #doodle {
+    .doodle-image {
         background-image: url('../assets/site_doodle@2x.png');
+    }
+
+    .cloud-left {
+        background-image: url('../assets/cloud-left@2x.png');
+    }
+
+    .cloud-right {
+        background-image: url('../assets/cloud-right@2x.png');
     }
 }
 
@@ -676,7 +717,7 @@ only screen and (                min-resolution: 2dppx) {
         margin-top: 30px;
     }
 
-    #doodle {
+    .doodle-image {
         background-image: url('../assets/mobile_doodle.png');
         top: 1%;
         background-position: 50% 50%;
@@ -697,7 +738,7 @@ only screen and (        min-device-pixel-ratio: 2) and (max-width: 625px),
 only screen and (                min-resolution: 192dpi) and (max-width: 625px),
 only screen and (                min-resolution: 2dppx) and (max-width: 625px) {
 
-    #doodle {
+    .doodle-image {
         background-image: url('../assets/mobile_doodle@2x.png');
     }
 }
@@ -785,7 +826,7 @@ break line after my photo
 Until 301px, menu is on 3 lines
 */
 @media screen and (max-width: 301px){
-    #doodle {
+    .doodle-image {
         top: 0;
     }
 
