@@ -60,8 +60,8 @@ h3 {
 }
 
 header {
-    -webkit-box-shadow: -2px 1px 7px #9E9E9E; /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
-    box-shadow: -2px 1px 7px #9E9E9E;
+   /* -webkit-box-shadow: -2px 1px 7px #9E9E9E;*/ /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+   /* box-shadow: -2px 1px 7px #9E9E9E;*/
 }
 
 .pure-menu.pure-menu-open.pure-menu-horizontal a.pure-menu-heading {
