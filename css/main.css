@@ -114,9 +114,7 @@ header {
 
 .contact-icons {
     display: inline-block; 
-    position: absolute;
-    bottom: -1px;
-    right: 0; 
+    float: right;
     margin-right: 20px;
 }
 
@@ -231,6 +229,13 @@ hr {
 /* When a category is selected */
 .category-title.active {
     background-color: #00abc0;
+}
+
+.sticky-header {
+    display: none;
+    margin: 0;
+    padding: 2em 0 1.5em 1em;
+    background-color: rgb(255, 255, 253);
 }
 
 .image-grid {
