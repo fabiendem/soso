@@ -6,6 +6,10 @@ html, button, input, select, textarea,
     -webkit-font-smoothing: antialiased;
 }
 
+html, body {
+    min-height: 100%;
+}
+
 body,
 #home {
     background-size: 300px 300px;

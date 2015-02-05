@@ -95,11 +95,11 @@ $(document).ready(function() {
     };
 
     var vendorTransforms = [
-        '',
         '-webkit-',
         '-moz-',
         '-ms-',
-        '-o-'
+        '-o-',
+        ''
     ];
 
     var _scale = function($element, ratio) {
@@ -155,13 +155,13 @@ $(document).ready(function() {
         _translateY($stickyHeader, positionStickyHeader + '%');
     };
 
-    var $body = $('body');
+    var $window = $(window);
     var isScrolling = false;
     var AnimationFrame = window.AnimationFrame;
     AnimationFrame.shim();
-    $(window).scroll(_throttle(function () {
+    $window.scroll(_throttle(function () {
         isScrolling = true;
-        scrollTopBody = $body.scrollTop();
+        scrollTopBody = $window.scrollTop();
         refreshOnScroll(scrollTopBody);
     }, 60));
 
