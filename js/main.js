@@ -61,6 +61,19 @@ $(document).ready(function() {
         duration: 600
     });
 
+    var $body = $('body');
+    var doodleHeight = $('#doodle').height();
+    var $stickyHeader = $('#sticky-header');
+    $(window).scroll(function () {
+        var scrollTopBody = $body.scrollTop();
+        if(scrollTopBody > doodleHeight) {
+            $stickyHeader.show();
+        }
+        else {
+            $stickyHeader.hide();
+        }
+    });
+
     var $imageGrid = $('#image-grid');
     $imageGrid.shuffle({
         itemSelector: '.image-block'
@@ -72,15 +85,25 @@ $(document).ready(function() {
         var $btns = $filterOptions.children();
         $btns.on('click', function() {
             var $this = $(this),
-            isActive = $this.hasClass( 'active' ),
+            isActive = $this.hasClass('active'),
             group = isActive ? 'all' : $this.data('group');
 
             // Hide current label, show current label in title
-            if ( !isActive ) {
+            if (! isActive) {
                 $('.filter-options .active').removeClass('active');
             }
 
             $this.toggleClass('active');
+
+            // Synchronize all the buttons, normal and sticky headers
+            var $otherButtons = $filterOptions.children('[data-group="' + group + '"]');
+            console.log($otherButtons.length);
+            $otherButtons.each(function() {
+                var $button = $(this);
+                if(! isActive && ! $button.hasClass('active')) {
+                    $button.addClass('active');
+                }
+            });
 
             // Filter elements
             $imageGrid.shuffle( 'shuffle', group );
