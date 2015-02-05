@@ -36,7 +36,6 @@ h3 {
     font-size: 1.4em;
 }
 
-
 .browsehappy {
     margin: 0.2em 0;
     background: #4D7E91;
@@ -64,15 +63,37 @@ header {
    /* box-shadow: -2px 1px 7px #9E9E9E;*/
 }
 
+.header-fixed {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.sticky-header {
+    display: block;
+    margin: 0;
+    padding: 0 0 1.5em 1em;
+    background-color: rgb(255, 255, 253);
+    position: absolute;
+    width: 100%;
+    bottom: 0%;
+}
+
 .pure-menu.pure-menu-open.pure-menu-horizontal a.pure-menu-heading {
     padding-left: 2px;
     padding-right: 0;
 }
 
-
 #menu-items {
     margin-left: 10px;
     font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.pure-menu {
+    position: relative;
+    z-index: 9;
 }
 
 .pure-menu.pure-menu-open {
@@ -93,13 +114,11 @@ header {
     font-size: 100%;
 }
 
-
 .pure-menu .pure-menu-selected a {
     color: #253137;
     font-size: 18px!important;
     font-weight: 700;   
 }
-
 
 .pure-menu li a {
     padding: 0 10px 0 10px;
@@ -114,7 +133,8 @@ header {
 
 .contact-icons {
     display: inline-block; 
-    float: right;
+    position: absolute;
+    right: 0;
     margin-right: 20px;
 }
 
@@ -127,14 +147,6 @@ header {
 
 .contact-icons a:hover {
     color: #00abc0;
-}
-
-.header-fixed {
-	position: fixed;
-	z-index: 10;
-	right: 0;
-	left: 0;
-	top: 0;
 }
 
 hr {
@@ -239,10 +251,6 @@ hr {
     }
 }
 
-.tag {
-    margin: 2em 0 1.5em 1em;
-}
-
 .category-title {
     display: inline-block;
     font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -262,13 +270,6 @@ hr {
 /* When a category is selected */
 .category-title.active {
     background-color: #00abc0;
-}
-
-.sticky-header {
-    display: none;
-    margin: 0;
-    padding: 2em 0 1.5em 1em;
-    background-color: rgb(255, 255, 253);
 }
 
 .image-grid {
