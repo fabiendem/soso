@@ -184,6 +184,10 @@ $(document).ready(function() {
     };
 
     var $contactSpeaker = $('#contact-speaker');
+    var $movingColibri = $('#moving-colibri');
+    var spritesColibri = ['icon-colibri', 'icon-colibri-d', 'icon-colibri', 'icon-colibri-h'];
+    var numberOfSprites = spritesColibri.length;
+    var spriteNumber = 0;
     var animateOnScroll = function(scrollTopWindow) {
         if(scrollTopWindow >= bottomScroll) {
             $contactSpeaker.removeClass('icon-speaker-l').addClass('icon-speaker-s');
@@ -191,6 +195,9 @@ $(document).ready(function() {
         else {
             $contactSpeaker.removeClass('icon-speaker-s').addClass('icon-speaker-l');
         }
+        $movingColibri.removeClass('icon-colibri icon-colibri-d icon-colibri-h').addClass(spritesColibri[spriteNumber]);
+        spriteNumber++;
+        spriteNumber = spriteNumber >= numberOfSprites ? 0 : spriteNumber;
     };
 
     var $imageGrid = $('#image-grid');
