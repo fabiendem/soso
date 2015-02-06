@@ -120,20 +120,48 @@ $(document).ready(function() {
         });
     };
 
+
+    var $window = $(window);
+    var isScrolling = false;
+    var AnimationFrame = window.AnimationFrame;
+    AnimationFrame.shim();
+
+    var scrollTopWindow;
+    // Firefox wants the window
+    $window.scroll(_throttle(function () {
+        isScrolling = true;
+        scrollTopWindow = $window.scrollTop();
+        refreshOnScroll(scrollTopWindow);
+    }, 60));
+
+    var refreshOnScroll = function(scrollTopWindow) {
+        if(isScrolling) {
+            applyParallax(scrollTopWindow);
+            animateOnScroll(scrollTopWindow);
+            AnimationFrame(function() {
+                refreshOnScroll(scrollTopWindow);
+            });
+            isScrolling = false;
+        }
+    };
+
     var $doodleImage = $('#doodle-image');
     var doodleHeight = $('#doodle').height();
     var $stickyHeader = $('#sticky-header');
     var $cloudLeft = $('#cloud-left');
     var $cloudRight = $('#cloud-right');
     var initialHorizontalPosition = 19; // %
-    var scrollTopBody;
     var ratioDoodleScroll;
     var percentDoodleScroll;
     var positionCloud;
     var positionStickyHeader;
     var scaleDoodle;
-    var applyParallax = function(scrollTopBody) {
-        ratioDoodleScroll = 1 + (scrollTopBody - doodleHeight) / doodleHeight;
+    var windowHeight = $(window).height();
+    var documentHeight = $(document).height();
+    var bottomScroll = documentHeight - windowHeight;
+
+    var applyParallax = function(scrollTopWindow) {
+        ratioDoodleScroll = 1 + (scrollTopWindow - doodleHeight) / doodleHeight;
         // Round with 4 decimals
         ratioDoodleScroll = +ratioDoodleScroll.toFixed(4);
 
@@ -155,23 +183,13 @@ $(document).ready(function() {
         _translateY($stickyHeader, positionStickyHeader + '%');
     };
 
-    var $window = $(window);
-    var isScrolling = false;
-    var AnimationFrame = window.AnimationFrame;
-    AnimationFrame.shim();
-    $window.scroll(_throttle(function () {
-        isScrolling = true;
-        scrollTopBody = $window.scrollTop();
-        refreshOnScroll(scrollTopBody);
-    }, 60));
-
-    var refreshOnScroll = function(scrollTopBody) {
-        if(isScrolling) {
-            applyParallax(scrollTopBody);
-            AnimationFrame(function() {
-                refreshOnScroll(scrollTopBody);
-            });
-            isScrolling = false;
+    var $contactSpeaker = $('#contact-speaker');
+    var animateOnScroll = function(scrollTopWindow) {
+        if(scrollTopWindow >= bottomScroll) {
+            $contactSpeaker.removeClass('icon-speaker-l').addClass('icon-speaker-s');
+        }
+        else {
+            $contactSpeaker.removeClass('icon-speaker-s').addClass('icon-speaker-l');
         }
     };
 

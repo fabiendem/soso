@@ -528,7 +528,7 @@ So the menu does not hide the section when you click on about
     vertical-align: top;
 }
 
-div.icon-contact {
+div.contact-speaker {
     font-size: 45px;
     margin: 0 8px;
     color: #0096a6;
@@ -779,15 +779,12 @@ only screen and (                min-resolution: 2dppx) and (max-width: 625px) {
         margin-right: 0;
     }
 
-    span.icon-contact {
-        margin: 0 10px 0 0;
-    }
     h2 {
         font-size: 1.2em; 
         line-height: 1.2em;
     }
 
-    div.icon-contact {
+    div.contact-speaker {
         font-size: 35px;
         margin: 0 8px;
     }
