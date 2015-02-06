@@ -206,23 +206,35 @@ $(document).ready(function() {
     });
 
     var $filterOptions = $('.filter-options');
+    var $allCategories = $('#all-categories');
     // Set up button clicks
     var setupFilters = function() {
         var $btns = $filterOptions.children();
         $btns.on('click', function() {
             var $this = $(this),
-            isActive = $this.hasClass('active'),
-            group = isActive ? 'all' : $this.data('group');
+            groupClicked = $this.data('group'),
+            isAllButtonClicked = groupClicked === 'all',
+            wasActive = $this.hasClass('active'),
+            newGroup = 'all';
 
-            // Hide current label, show current label in title
-            if (! isActive) {
+            if(! isAllButtonClicked) {
+                newGroup = wasActive ? 'all' : $this.data('group');
+                // Hide current label, show current label in title
+                if (! wasActive) {
+                    $('.filter-options .active').removeClass('active');
+                }
+                else {
+                    $allCategories.addClass('active');
+                }
+                $this.toggleClass('active');
+            }
+            else {
                 $('.filter-options .active').removeClass('active');
+                $allCategories.addClass('active');
             }
 
-            $this.toggleClass('active');
-
             // Filter elements
-            $imageGrid.shuffle( 'shuffle', group );
+            $imageGrid.shuffle('shuffle', newGroup);
         });
         $btns = null;
     };
