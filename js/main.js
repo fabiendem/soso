@@ -9,7 +9,7 @@ $(document).ready(function() {
     var AnimationFrame = window.AnimationFrame;
     AnimationFrame.shim();
 
-    var vendorTransforms = [
+    var vendorPrefixes = [
         '-webkit-',
         '-moz-',
         '-ms-',
@@ -52,19 +52,19 @@ $(document).ready(function() {
     };
 
     var _scale = function($element, ratio) {
-        $.each(vendorTransforms, function(index, vendor) {
+        $.each(vendorPrefixes, function(index, vendor) {
             $element.css(vendor + 'transform', 'scale3d(' + ratio + ', ' + ratio + ', 1)');
         });
     };
 
     var _translateX = function($element, n) {
-        $.each(vendorTransforms, function(index, vendor) {
+        $.each(vendorPrefixes, function(index, vendor) {
             $element.css(vendor + 'transform', 'translate3d(' + n + ', 0, 0)');
         });
     };
 
     var _translateY = function($element, n) {
-        $.each(vendorTransforms, function(index, vendor) {
+        $.each(vendorPrefixes, function(index, vendor) {
             $element.css(vendor + 'transform', 'translate3d(0, ' + n + ', 0)');
         });
     };
