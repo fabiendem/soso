@@ -1,64 +1,21 @@
 $(document).ready(function() {
-    $('#image-grid').each(function() { // the containers for all your galleries
-        $(this).magnificPopup({
-            delegate: '.filtered a', // the selector for gallery item
-            type: 'image',
-            gallery: {
-                enabled:true
-            },
-            retina: {
-                ratio: 2
-            },
-            removalDelay: 500,
-            callbacks: {
-                beforeOpen: function() {
-                    var self = this;
-                    // just a hack that adds mfp-anim class to markup 
-                    self.st.image.markup = self.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
-                    self.st.mainClass = self.st.el.attr('data-effect');
-                }
-            }
-        });
-    });
 
-    var updateHash = function(newHash) {
-        if(history.pushState) {
-            history.pushState(null, null, newHash);
-        }
-        else {
-            location.hash = newHash;
-        }
-    };
+    var $imageGrid = $('#image-grid');
+    var $filterOptions = $('.filter-options');
+    var $allCategories = $('#all-categories');
 
-    var highlightMenuItem = function($menuItem) {
-        $('#menu-items li').removeClass('pure-menu-selected');
-        $($menuItem).addClass('pure-menu-selected');
-    };
+    var $window = $(window);
+    var isScrolling = false;
+    var AnimationFrame = window.AnimationFrame;
+    AnimationFrame.shim();
 
-    // Menu classes when clicked
-    $('#menu-items li').click(function () {
-        // Set the class on the clicked item and remove on the others
-        var $this = $(this);
-        highlightMenuItem($this);
-        
-        // Update Hash in the url
-        var id = $this.attr('id');
-        var newHash = '#' + id.substr('menu-item-'.length, id.length);
-        updateHash(newHash);
-    });
-
-
-    // When loading from a hash, highlight the corresponding one
-    var currentHash = window.location.hash;
-    if(currentHash !== '') {
-        currentHash = currentHash.substr(1, currentHash.length);
-        highlightMenuItem($('#menu-item-' + currentHash));
-    }
-
-    // Apply local smooth scrolling
-    $('nav').localScroll({
-        duration: 600
-    });
+    var vendorTransforms = [
+        '-webkit-',
+        '-moz-',
+        '-ms-',
+        '-o-',
+        ''
+    ];
 
     _now = Date.now || function() {
         return new Date().getTime();
@@ -94,14 +51,6 @@ $(document).ready(function() {
         };
     };
 
-    var vendorTransforms = [
-        '-webkit-',
-        '-moz-',
-        '-ms-',
-        '-o-',
-        ''
-    ];
-
     var _scale = function($element, ratio) {
         $.each(vendorTransforms, function(index, vendor) {
             $element.css(vendor + 'transform', 'scale3d(' + ratio + ', ' + ratio + ', 1)');
@@ -120,26 +69,87 @@ $(document).ready(function() {
         });
     };
 
+    var _updateHash = function(newHash) {
+        if(history.pushState) {
+            history.pushState(null, null, newHash);
+        }
+        else {
+            location.hash = newHash;
+        }
+    };
 
-    var $window = $(window);
-    var isScrolling = false;
-    var AnimationFrame = window.AnimationFrame;
-    AnimationFrame.shim();
+    var _highlightMenuItem = function($menuItem) {
+        $('#menu-items li').removeClass('pure-menu-selected');
+        $($menuItem).addClass('pure-menu-selected');
+    };
+
+    // Menu classes when clicked
+    $('#menu-items li').click(function () {
+        // Set the class on the clicked item and remove on the others
+        var $this = $(this);
+        _highlightMenuItem($this);
+        
+        // Update Hash in the url
+        var id = $this.attr('id');
+        var newHash = '#' + id.substr('menu-item-'.length, id.length);
+        _updateHash(newHash);
+
+        if(id === 'menu-item-portfolio') {
+            $('.filter-options .active').removeClass('active');
+            $allCategories.addClass('active');
+            // Filter elements
+            $imageGrid.shuffle('shuffle', 'all');
+        }
+    });
+
+    // When loading from a hash, highlight the corresponding one
+    var currentHash = window.location.hash;
+    if(currentHash !== '') {
+        currentHash = currentHash.substr(1, currentHash.length);
+        _highlightMenuItem($('#menu-item-' + currentHash));
+    }
+
+    // Apply local smooth scrolling
+    $('nav').localScroll({
+        duration: 600
+    });
+
+    $imageGrid.each(function() { // the containers for all your galleries
+        $(this).magnificPopup({
+            delegate: '.filtered a', // the selector for gallery item
+            type: 'image',
+            gallery: {
+                enabled:true
+            },
+            retina: {
+                ratio: 2
+            },
+            removalDelay: 500,
+            callbacks: {
+                beforeOpen: function() {
+                    var self = this;
+                    // just a hack that adds mfp-anim class to markup 
+                    self.st.image.markup = self.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+                    self.st.mainClass = self.st.el.attr('data-effect');
+                }
+            }
+        });
+    });
 
     var scrollTopWindow;
     // Firefox wants the window
     $window.scroll(_throttle(function () {
         isScrolling = true;
         scrollTopWindow = $window.scrollTop();
-        refreshOnScroll(scrollTopWindow);
+        _refreshOnScroll(scrollTopWindow);
     }, 60));
 
-    var refreshOnScroll = function(scrollTopWindow) {
+    var _refreshOnScroll = function(scrollTopWindow) {
         if(isScrolling) {
             applyParallax(scrollTopWindow);
             animateOnScroll(scrollTopWindow);
             AnimationFrame(function() {
-                refreshOnScroll(scrollTopWindow);
+                _refreshOnScroll(scrollTopWindow);
             });
             isScrolling = false;
         }
@@ -200,15 +210,12 @@ $(document).ready(function() {
         spriteNumber = spriteNumber >= numberOfSprites ? 0 : spriteNumber;
     };
 
-    var $imageGrid = $('#image-grid');
     $imageGrid.shuffle({
         itemSelector: '.image-block'
     });
 
-    var $filterOptions = $('.filter-options');
-    var $allCategories = $('#all-categories');
     // Set up button clicks
-    var setupFilters = function() {
+    var _setupFilters = function() {
         var $btns = $filterOptions.children();
         $btns.on('click', function() {
             var $this = $(this),
@@ -239,5 +246,5 @@ $(document).ready(function() {
         $btns = null;
     };
 
-    setupFilters();
+    _setupFilters();
 });
