@@ -146,8 +146,8 @@ $(document).ready(function() {
 
     var _refreshOnScroll = function(scrollTopWindow) {
         if(isScrolling) {
-            applyParallax(scrollTopWindow);
-            animateOnScroll(scrollTopWindow);
+            _applyParallax(scrollTopWindow);
+            _animateOnScroll(scrollTopWindow);
             AnimationFrame(function() {
                 _refreshOnScroll(scrollTopWindow);
             });
@@ -170,7 +170,7 @@ $(document).ready(function() {
     var documentHeight = $(document).height();
     var bottomScroll = documentHeight - windowHeight;
 
-    var applyParallax = function(scrollTopWindow) {
+    var _applyParallax = function(scrollTopWindow) {
         ratioDoodleScroll = 1 + (scrollTopWindow - doodleHeight) / doodleHeight;
         // Round with 4 decimals
         ratioDoodleScroll = +ratioDoodleScroll.toFixed(4);
@@ -184,7 +184,6 @@ $(document).ready(function() {
         // Scale down the doodle
         scaleDoodle = 1 - ratioDoodleScroll;
         scaleDoodle = scaleDoodle < 0 ? 0 : scaleDoodle;
-        scaleDoodle = scaleDoodle > 1 ? 1 : scaleDoodle;
         _scale($doodleImage, scaleDoodle);
 
         // Dropdown the filters
@@ -198,7 +197,7 @@ $(document).ready(function() {
     var spritesColibri = ['icon-colibri', 'icon-colibri-d', 'icon-colibri', 'icon-colibri-h'];
     var numberOfSprites = spritesColibri.length;
     var spriteNumber = 0;
-    var animateOnScroll = function(scrollTopWindow) {
+    var _animateOnScroll = function(scrollTopWindow) {
         if(scrollTopWindow >= bottomScroll) {
             $contactSpeaker.removeClass('icon-speaker-l').addClass('icon-speaker-s');
         }
