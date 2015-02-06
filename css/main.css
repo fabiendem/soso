@@ -101,7 +101,7 @@ header {
 }
 
 .pure-menu.pure-menu-open {
-    background-color: #fdfdfd;
+    background-color: rgb(255, 255, 253);
     padding: 6px 0 0px 10px;
 }
 
@@ -343,6 +343,7 @@ figcaption {
     color: #0096a6;
     margin-top: 6px;
     line-height: 17px;
+    margin-left: 4px;
 }
 
 img.mfp-img {
