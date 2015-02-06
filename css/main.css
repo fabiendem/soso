@@ -82,7 +82,7 @@ header {
     background-color: rgb(255, 255, 253);
     position: absolute;
     width: 100%;
-    bottom: 0%;
+    bottom: 1%;
 }
 
 .pure-menu.pure-menu-open.pure-menu-horizontal a.pure-menu-heading {
