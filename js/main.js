@@ -266,6 +266,13 @@ $(document).ready(function() {
         spriteNumber = spriteNumber >= numberOfSprites ? 0 : spriteNumber;
     };
 
+    $('#contact').hover(function() {
+        $contactSpeaker.removeClass('icon-speaker-l').addClass('icon-speaker-s');
+    },
+    function() {
+        $contactSpeaker.removeClass('icon-speaker-s').addClass('icon-speaker-l');
+    });
+
     var _resetColibri = function() {
         $movingColibri.removeClass('icon-colibri icon-colibri-d icon-colibri-h')
                       .addClass('icon-colibri');
