@@ -476,7 +476,7 @@ So the menu does not hide the section when you click on about
  #about, #portfolio {
     display: block;
     position: relative;
-    top: -35px;
+    top: -90px;
     visibility: hidden;
 }
 
