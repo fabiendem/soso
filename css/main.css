@@ -186,17 +186,18 @@ hr {
     top: 30%;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 100%;
 }
 
 .cloud-left {
-    width: 8%;
+    width: 10%;
+    height: 8%;
     left: 19%;
     background-image: url('../assets/cloud-left.png');
 }
 
 .cloud-right {
-    width: 10.4%;
+    width: 12%;
+    height: 13%;
     right: 19%;
     background-image: url('../assets/cloud-right.png');
 }

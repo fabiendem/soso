@@ -9,14 +9,6 @@ $(document).ready(function() {
     var AnimationFrame = window.AnimationFrame;
     AnimationFrame.shim();
 
-    var vendorPrefixes = [
-        '-webkit-',
-        '-moz-',
-        '-ms-',
-        '-o-',
-        ''
-    ];
-
     _now = Date.now || function() {
         return new Date().getTime();
     };
@@ -51,6 +43,14 @@ $(document).ready(function() {
         };
     };
 
+    var vendorPrefixes = [
+        '-webkit-',
+        '-moz-',
+        '-ms-',
+        '-o-',
+        ''
+    ];
+
     var _scale = function($element, ratio) {
         $.each(vendorPrefixes, function(index, vendor) {
             $element.css(vendor + 'transform', 'scale3d(' + ratio + ', ' + ratio + ', 1)');
@@ -66,6 +66,12 @@ $(document).ready(function() {
     var _translateY = function($element, n) {
         $.each(vendorPrefixes, function(index, vendor) {
             $element.css(vendor + 'transform', 'translate3d(0, ' + n + ', 0)');
+        });
+    };
+
+    var _translateXAndScale = function ($element, translateX, scale) {
+        $.each(vendorPrefixes, function(index, vendor) {
+            $element.css(vendor + 'transform', 'translateX(' + translateX + ') scale3d(' + scale + ', ' + scale + ', 1)');
         });
     };
 
@@ -166,7 +172,7 @@ $(document).ready(function() {
     var percentDoodleScroll;
     var positionCloud;
     var positionStickyHeader;
-    var scaleDoodle;
+    var scaleScroll;
     var windowHeight = $(window).height();
     var documentHeight = $(document).height();
     var bottomScroll = documentHeight - windowHeight;
@@ -175,17 +181,16 @@ $(document).ready(function() {
         ratioDoodleScroll = 1 + (scrollTopWindow - doodleHeight) / doodleHeight;
         // Round with 4 decimals
         ratioDoodleScroll = +ratioDoodleScroll.toFixed(4);
-
         percentDoodleScroll = ratioDoodleScroll * 100;
 
-        // Move the clouds
-        _translateX($cloudLeft, -percentDoodleScroll + '%');
-        _translateX($cloudRight, percentDoodleScroll + '%');
-
         // Scale down the doodle
-        scaleDoodle = 1 - ratioDoodleScroll;
-        scaleDoodle = scaleDoodle < 0 ? 0 : scaleDoodle;
-        _scale($doodleImage, scaleDoodle);
+        scaleScroll = 1 - ratioDoodleScroll;
+        scaleScroll = scaleScroll < 0 ? 0 : scaleScroll;
+        _scale($doodleImage, scaleScroll);
+
+        // Move the clouds and scale down the clouds
+        _translateXAndScale($cloudLeft, -percentDoodleScroll + '%', scaleScroll);
+        _translateXAndScale($cloudRight, percentDoodleScroll + '%', scaleScroll);
 
         // Dropdown the filters
         positionStickyHeader = percentDoodleScroll;
