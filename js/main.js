@@ -124,6 +124,7 @@ $(document).ready(function() {
             retina: {
                 ratio: 2
             },
+            preload: [2,2],
             removalDelay: 500,
             callbacks: {
                 beforeOpen: function() {
