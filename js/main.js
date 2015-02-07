@@ -1,13 +1,19 @@
 $(document).ready(function() {
 
+    $.fn.scrollStopped = function(callback) {
+        var $this = $(this), 
+            self = this;
+        $this.scroll(function(){
+            if ($this.data('scrollTimeout')) {
+              clearTimeout($this.data('scrollTimeout'));
+            }
+            $this.data('scrollTimeout', setTimeout(callback, 250, self));
+        });
+    };
+
     var $imageGrid = $('#image-grid');
     var $filterOptions = $('.filter-options');
     var $allCategories = $('#all-categories');
-
-    var $window = $(window);
-    var isScrolling = false;
-    var AnimationFrame = window.AnimationFrame;
-    AnimationFrame.shim();
 
     _now = Date.now || function() {
         return new Date().getTime();
@@ -143,13 +149,22 @@ $(document).ready(function() {
         });
     });
 
+    var $window = $(window);
+    var isScrolling = false;
+    var AnimationFrame = window.AnimationFrame;
+    AnimationFrame.shim();
     var scrollTopWindow;
+
     // Firefox wants the window
     $window.scroll(_throttle(function () {
         isScrolling = true;
         scrollTopWindow = $window.scrollTop();
         _refreshOnScroll(scrollTopWindow);
     }, 60));
+
+    $window.scrollStopped(function() {
+        _resetColibri();
+    });
 
     var _refreshOnScroll = function(scrollTopWindow) {
         if(isScrolling) {
@@ -204,15 +219,21 @@ $(document).ready(function() {
     var numberOfSprites = spritesColibri.length;
     var spriteNumber = 0;
     var _animateOnScroll = function(scrollTopWindow) {
+        // Speaker
         if(scrollTopWindow >= bottomScroll) {
             $contactSpeaker.removeClass('icon-speaker-l').addClass('icon-speaker-s');
         }
         else {
             $contactSpeaker.removeClass('icon-speaker-s').addClass('icon-speaker-l');
         }
+        // Colibri
         $movingColibri.removeClass('icon-colibri icon-colibri-d icon-colibri-h').addClass(spritesColibri[spriteNumber]);
         spriteNumber++;
         spriteNumber = spriteNumber >= numberOfSprites ? 0 : spriteNumber;
+    };
+
+    var _resetColibri = function() {
+        $movingColibri.removeClass('icon-colibri icon-colibri-d icon-colibri-h').addClass('icon-colibri');
     };
 
     $imageGrid.shuffle({
