@@ -268,6 +268,11 @@ $(document).ready(function() {
 
             // Filter elements
             $imageGrid.shuffle('shuffle', newGroup);
+
+            // Scroll up to portfolio
+            $(window).scrollTo('#portfolio', {
+                duration: 600
+            });
         });
         $btns = null;
     };
