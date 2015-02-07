@@ -194,8 +194,15 @@ $(document).ready(function() {
 
     var _applyParallax = function(scrollTopWindow) {
         ratioDoodleScroll = 1 + (scrollTopWindow - doodleHeight) / doodleHeight;
+        
+        // Don't do useless UI modification
+        if(ratioDoodleScroll > 1) {
+            return;
+        }
+
         // Round with 4 decimals
         ratioDoodleScroll = +ratioDoodleScroll.toFixed(4);
+
         percentDoodleScroll = ratioDoodleScroll * 100;
 
         // Scale down the doodle
