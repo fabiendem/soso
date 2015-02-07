@@ -78,6 +78,33 @@ h3 {
     position: absolute;
     width: 100%;
     bottom: 1%;
+    /* Translate it down */
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+}
+
+.sticky-header.no-transition {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+.sticky-header.hidden {
+    -webkit-transform: translate3d(0, 0%, 0) !important;
+    -moz-transform: translate3d(0, 0%, 0) !important;
+    -ms-transform: translate3d(0, 0%, 0) !important;
+    -o-transform: translate3d(0, 0%, 0) !important;
+    transform: translate3d(0, 0%, 0) !important;
 }
 
 .pure-menu.pure-menu-open.pure-menu-horizontal a.pure-menu-heading {

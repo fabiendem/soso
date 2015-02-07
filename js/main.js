@@ -121,8 +121,9 @@ $(document).ready(function() {
         _highlightMenuItem($('#menu-item-' + currentHash));
     }
 
+    var $nav = $('nav');
     // Apply local smooth scrolling
-    $('nav').localScroll({
+    $nav.localScroll({
         duration: 600
     });
 
@@ -154,22 +155,60 @@ $(document).ready(function() {
     var AnimationFrame = window.AnimationFrame;
     AnimationFrame.shim();
     var scrollTopWindow;
-
-    // Firefox wants the window
-    $window.scroll(_throttle(function () {
-        isScrolling = true;
-        scrollTopWindow = $window.scrollTop();
-        _refreshOnScroll(scrollTopWindow);
-    }, 60));
-
-    $window.scrollStopped(function() {
-        _resetColibri();
-    });
+    var documentHeight = $(document).height();
+    var $about = $('#about-me');
+    var $stickyHeader = $('#sticky-header');
+    var $doodleImage = $('#doodle-image');
+    var doodleHeight = $('#doodle').height();
+    var $cloudLeft = $('#cloud-left');
+    var $cloudRight = $('#cloud-right');
+    var initialHorizontalPosition = 19; // %
+    var percentDoodleScrolled;
+    var positionCloud;
+    var scaleScroll;
+    var windowHeight = $(window).height();
+    var bottomScroll = documentHeight - windowHeight;
 
     var _refreshOnScroll = function(scrollTopWindow) {
         if(isScrolling) {
-            _applyParallax(scrollTopWindow);
+            var ratioDoodleScrolled = 1 + (scrollTopWindow - doodleHeight) / doodleHeight;
+            // Round with 4 decimals
+            ratioDoodleScrolled = +ratioDoodleScrolled.toFixed(4);
+
+            // Parallax in the doodle
+            _applyParallaxDoodle(ratioDoodleScrolled);
+
+            // Sticky header
+            var headerHeight = $nav.height() + $stickyHeader.height();
+            var aboutOffsetTop = $about.offset().top;
+            var imageGridOffsetTop = $imageGrid.offset().top;
+            // If we are over the about section
+            if(scrollTopWindow + headerHeight  > aboutOffsetTop) {
+                if($stickyHeader.hasClass('no-transition')) {
+                    $stickyHeader.removeClass('no-transition');
+                }
+                if(! $stickyHeader.hasClass('hidden')) {
+                    $stickyHeader.addClass('hidden');
+                }
+            }
+            else { // Above the about section
+                // Make sure the header is not hidden
+                if($stickyHeader.hasClass('hidden')) {
+                    $stickyHeader.removeClass('hidden');
+                }
+                // Scrolling up, if over the doodle
+                if(scrollTopWindow + headerHeight < imageGridOffsetTop) {
+                    // Disable transition, as it is based on the scrolling ratio
+                    if(! $stickyHeader.hasClass('no-transition')) {
+                        $stickyHeader.addClass('no-transition');
+                    }
+                    _revealStickyHeader(ratioDoodleScrolled);
+                }
+            }
+
+            // Animate collibri and speaker
             _animateOnScroll(scrollTopWindow);
+
             AnimationFrame(function() {
                 _refreshOnScroll(scrollTopWindow);
             });
@@ -177,45 +216,31 @@ $(document).ready(function() {
         }
     };
 
-    var $doodleImage = $('#doodle-image');
-    var doodleHeight = $('#doodle').height();
-    var $stickyHeader = $('#sticky-header');
-    var $cloudLeft = $('#cloud-left');
-    var $cloudRight = $('#cloud-right');
-    var initialHorizontalPosition = 19; // %
-    var ratioDoodleScroll;
-    var percentDoodleScroll;
-    var positionCloud;
-    var positionStickyHeader;
-    var scaleScroll;
-    var windowHeight = $(window).height();
-    var documentHeight = $(document).height();
-    var bottomScroll = documentHeight - windowHeight;
-
-    var _applyParallax = function(scrollTopWindow) {
-        ratioDoodleScroll = 1 + (scrollTopWindow - doodleHeight) / doodleHeight;
-        
-        // Don't do useless UI modification
-        if(ratioDoodleScroll > 1) {
+    var _applyParallaxDoodle = function(ratioDoodleScrolled) {
+        if(ratioDoodleScrolled > 1) {
             return;
         }
 
-        // Round with 4 decimals
-        ratioDoodleScroll = +ratioDoodleScroll.toFixed(4);
-
-        percentDoodleScroll = ratioDoodleScroll * 100;
-
         // Scale down the doodle
-        scaleScroll = 1 - ratioDoodleScroll;
+        var scaleScroll = 1 - ratioDoodleScrolled;
         scaleScroll = scaleScroll < 0 ? 0 : scaleScroll;
         _scale($doodleImage, scaleScroll);
 
         // Move the clouds and scale down the clouds
-        _translateXAndScale($cloudLeft, -percentDoodleScroll + '%', scaleScroll);
-        _translateXAndScale($cloudRight, percentDoodleScroll + '%', scaleScroll);
+        _translateXAndScale($cloudLeft, -ratioDoodleScrolled * 100 + '%', scaleScroll);
+        _translateXAndScale($cloudRight, ratioDoodleScrolled * 100 + '%', scaleScroll);
+    };
+
+    var _revealStickyHeader = function(ratioDoodleScrolled) {
+        if(ratioDoodleScrolled < 0) {
+            // Hide it because Safari shows it while the bounce of the scroll up...
+            $stickyHeader.hide();
+            return;
+        }
+        $stickyHeader.show();
 
         // Dropdown the filters
-        positionStickyHeader = percentDoodleScroll;
+        var positionStickyHeader = ratioDoodleScrolled * 100;
         positionStickyHeader = positionStickyHeader > 100 ? 100 : positionStickyHeader;
         _translateY($stickyHeader, positionStickyHeader + '%');
     };
@@ -234,14 +259,31 @@ $(document).ready(function() {
             $contactSpeaker.removeClass('icon-speaker-s').addClass('icon-speaker-l');
         }
         // Colibri
-        $movingColibri.removeClass('icon-colibri icon-colibri-d icon-colibri-h').addClass(spritesColibri[spriteNumber]);
+        $movingColibri.removeClass('icon-colibri icon-colibri-d icon-colibri-h')
+                      .addClass(spritesColibri[spriteNumber]);
+
         spriteNumber++;
         spriteNumber = spriteNumber >= numberOfSprites ? 0 : spriteNumber;
     };
 
     var _resetColibri = function() {
-        $movingColibri.removeClass('icon-colibri icon-colibri-d icon-colibri-h').addClass('icon-colibri');
+        $movingColibri.removeClass('icon-colibri icon-colibri-d icon-colibri-h')
+                      .addClass('icon-colibri');
     };
+
+    var _onScroll = function() {
+        isScrolling = true;
+        scrollTopWindow = $window.scrollTop();
+        _refreshOnScroll(scrollTopWindow);
+    };
+
+    // Firefox wants the window
+    $window.scroll(_throttle(_onScroll, 60));
+    _onScroll();
+
+    $window.scrollStopped(function() {
+        _resetColibri();
+    });
 
     $imageGrid.shuffle({
         itemSelector: '.image-block'
