@@ -753,9 +753,17 @@ only screen and (                min-resolution: 2dppx) {
         background-size: 80%;
     }
 
-     #about, #portfolio {
+    .doodle-clouds {
+        display: none;
+    }
+
+    #about, #portfolio {
         top: -100px;
-     }
+    }
+
+    .download-portfolio {
+        bottom: 15%;
+    }
 }
 
 /* Mobile retina */
