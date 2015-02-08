@@ -179,30 +179,33 @@ $(document).ready(function() {
             _applyParallaxDoodle(ratioDoodleScrolled);
 
             // Sticky header
-            var headerHeight = $nav.height() + $stickyHeader.height();
-            var aboutOffsetTop = $about.offset().top;
-            var imageGridOffsetTop = $imageGrid.offset().top;
-            // If we are over the about section
-            if(scrollTopWindow + headerHeight  > aboutOffsetTop) {
-                if($stickyHeader.hasClass('no-transition')) {
-                    $stickyHeader.removeClass('no-transition');
-                }
-                if(! $stickyHeader.hasClass('hidden')) {
-                    $stickyHeader.addClass('hidden');
-                }
-            }
-            else { // Above the about section
-                // Make sure the header is not hidden
-                if($stickyHeader.hasClass('hidden')) {
-                    $stickyHeader.removeClass('hidden');
-                }
-                // Scrolling up, if over the doodle
-                if(scrollTopWindow + headerHeight < imageGridOffsetTop) {
-                    // Disable transition, as it is based on the scrolling ratio
-                    if(! $stickyHeader.hasClass('no-transition')) {
-                        $stickyHeader.addClass('no-transition');
+            if($stickyHeader.length > 0 &&
+                $about.length > 0) {
+                var headerHeight = $nav.height() + $stickyHeader.height();
+                var aboutOffsetTop = $about.offset().top;
+                var imageGridOffsetTop = $imageGrid.offset().top;
+                // If we are over the about section
+                if(scrollTopWindow + headerHeight  > aboutOffsetTop) {
+                    if($stickyHeader.hasClass('no-transition')) {
+                        $stickyHeader.removeClass('no-transition');
                     }
-                    _revealStickyHeader(ratioDoodleScrolled);
+                    if(! $stickyHeader.hasClass('hidden')) {
+                        $stickyHeader.addClass('hidden');
+                    }
+                }
+                else { // Above the about section
+                    // Make sure the header is not hidden
+                    if($stickyHeader.hasClass('hidden')) {
+                        $stickyHeader.removeClass('hidden');
+                    }
+                    // Scrolling up, if over the doodle
+                    if(scrollTopWindow + headerHeight < imageGridOffsetTop) {
+                        // Disable transition, as it is based on the scrolling ratio
+                        if(! $stickyHeader.hasClass('no-transition')) {
+                            $stickyHeader.addClass('no-transition');
+                        }
+                        _revealStickyHeader(ratioDoodleScrolled);
+                    }
                 }
             }
 

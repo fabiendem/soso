@@ -87,23 +87,23 @@
         </script>
     </head>
     <body>
-
-            <header class="header-fixed">
-                <nav class="pure-menu pure-menu-open pure-menu-horizontal">
-                  <a href="http://sonialahcene.com"  class="pure-menu-heading"><span class="icon-colibri2"></span></a><a href="http://sonialahcene.com" class="pure-menu-heading sonial">Sonia Lahcene Graphic Design</a>
-                    <ul id="menu-items">
-                        <li><a href="/#portfolio" title"Portfolio">Portfolio</a></li>
-                        <li><a href="/#about" title="About me">About</a></li>
-                        <li><a href="/#contact" title="Contact me">Contact</a></li>
-                        <li class="pure-menu-selected"><a href="/cv" title="My CV">CV</a></li>
-                    </ul>
-                    <div class="contact-icons">
+        <header class="header-fixed">
+            <nav class="pure-menu pure-menu-open pure-menu-horizontal">
+                <a href="http://sonialahcene.com" class="pure-menu-heading"><span id="moving-colibri" class="moving-colibri icon-colibri"></span></a>
+                <a href="http://sonialahcene.com"  class="pure-menu-heading sonial">Sonia Lahcene Graphic Design</a>
+                <ul id="menu-items">
+                    <li id="menu-item-portfolio"><a href="/#portfolio" title"Portfolio">Portfolio</a></li>
+                    <li id="menu-item-about"><a href="/#about" title="About me">About</a></li>
+                    <li id="menu-item-contact"><a href="/#contact" title="Contact me">Contact</a></li>
+                    <li class="pure-menu-selected" id="menu-item-cv"><a href="/cv" title="My CV">CV</a></li>
+                </ul>
+                <div class="contact-icons">
                     <a href="mailto:contact@sonialahcene.com" target="blank" title="Email Sonia Lahcene" class="icon-email"></a>
                     <a href="http://uk.linkedin.com/in/sonialahcene" target="blank" title="LinkedIn Sonia Lahcene" class="icon-linkdn"></a>
                     <a href="http://sonialahcene.tumblr.com/" class="icon-tumblr" target="blank" title="Tumblr Sonia Lahcene" ></a>
-                    </div>
-                </nav>
-            </header>
+                </div>
+            </nav>
+        </header>
 
             <main id="main-cv">
                  <section id="header-cv">
@@ -338,34 +338,9 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/retina.js/1.3.0/retina.min.js"></script>
         <script src="//cdn.jsdelivr.net/jquery.scrollto/1.4.13/jquery.scrollTo.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.3.5/jquery.localScroll.min.js"></script>
-
-        <script>
-            $(document).ready(function() {
-                $('.image-grid').each(function() { // the containers for all your galleries
-                    $(this).magnificPopup({
-                        delegate: 'a', // the selector for gallery item
-                        type: 'image',
-                        gallery: {
-                            enabled:true
-                        },
-                        retina: {
-                            ratio: 2
-                        }
-                    });
-                });
-
-                // Menu classes when selected
-                $('#menu-items li').click(function () {
-                    var $this = $(this);
-                    $('#menu-items li').removeClass('pure-menu-selected');
-                    $this.addClass('pure-menu-selected');
-                });
-
-                $('nav').localScroll({
-                    duration: 600
-                });
-            });
-        </script>
+        <script src="js/vendor/jquery.shuffle.min.js"></script>
+        <script src="js/vendor/animation-frame.min.js"></script>
+        <script src="js/main.js"></script>
 
         <!-- Google Analytics -->
         <script>
