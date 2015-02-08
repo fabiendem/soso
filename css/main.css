@@ -18,7 +18,7 @@ body,
 
 body {
     color: #253137;
-    background-color: #FFBF15;
+    background-color: rgb(255, 255, 253);
     font-size: 15px;
     line-height: 20px;
 }
@@ -72,9 +72,9 @@ h3 {
 
 .sticky-header {
     display: block;
+    background-color: rgb(255, 255, 253);
     margin: 0;
     padding: 0 0 0.7em 1em;
-    background-color: rgb(255, 255, 253);
     position: absolute;
     width: 100%;
     bottom: 1%;
@@ -123,7 +123,6 @@ h3 {
 }
 
 .pure-menu.pure-menu-open {
-    background-color: rgb(255, 255, 253);
     padding: 6px 0 6px 10px;
 }
 
@@ -189,6 +188,7 @@ hr {
     right: 0;
     height: 92vh;
     width: 100%;
+    background-color: #FFBF15;
 }
 
 .doodle-image {
@@ -200,6 +200,7 @@ hr {
     background-repeat: no-repeat;
     background-position: 40% 50%;
     background-size: 80%;
+    -webkit-transform: translate3d(0,0,0);
 }
 
 .doodle-clouds {
@@ -230,14 +231,16 @@ hr {
 }
 
 #home {
-    background-color: rgb(255, 255, 253);
     position: relative;
     z-index: 8;
     top: 92vh;
     margin-top: 50px;
+    background-color: rgb(255, 255, 253);
     border-top: 1px solid #DBDBDB;
-    /* Force GPU rendering for iOS otherwise you get glitches when scrolling*/
+    min-height: 100%;
     -webkit-transform: translate3d(0,0,0);
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
 }
 
 /*
@@ -322,9 +325,8 @@ hr {
 .thumbnail {
 	margin: 0 auto;
     border: #FFFFFF 6px solid;
-    -webkit-transform: translateZ(0);
 
-        /* Black and white */
+    /* Black and white */
     -webkit-filter: grayscale(1);
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
@@ -689,7 +691,6 @@ p.squeezer {
     background-color: rgba(255, 197, 31, 0.65);
     padding-right: 22px;
 }
-
 
 .download-portfolio div{
     font-weight: bolder;
