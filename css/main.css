@@ -748,7 +748,7 @@ only screen and (                min-resolution: 2dppx) {
 
     .doodle-image {
         background-image: url('../assets/mobile_doodle.png');
-        top: 1%;
+        bottom: 10%;
         background-position: 50% 50%;
         background-size: 80%;
     }
@@ -799,7 +799,6 @@ only screen and (                min-resolution: 2dppx) and (max-width: 625px) {
     }
 }
 
-
 /* Until 490px stick the contacts details under the icon and title*/
 @media screen and (max-width: 490px){   
     .about {
@@ -825,7 +824,7 @@ only screen and (                min-resolution: 2dppx) and (max-width: 625px) {
 }
 
 /* 
-Until 410px, 
+Until 410px,
 remove the colibri in the menu and reshape the menu,
 break line after my photo 
 */
@@ -855,8 +854,8 @@ break line after my photo
         margin-left: 5px;
     }
     .pure-menu li a {
-    padding-left: 0;
-}
+        padding-left: 0;
+    }
 }
 
 /* 
