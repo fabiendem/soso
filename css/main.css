@@ -748,7 +748,7 @@ only screen and (                min-resolution: 2dppx) {
 
     .doodle-image {
         background-image: url('../assets/mobile_doodle.png');
-        bottom: 10%;
+        bottom: 11%;
         background-position: 50% 50%;
         background-size: 80%;
     }
