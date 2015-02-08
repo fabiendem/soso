@@ -848,12 +848,15 @@ break line after my photo
     }
 
     a.pure-menu-heading.sonial {
-        padding: 5px 15px 0px !important;
+        padding: 5px 15px 0 0 !important;
     }
 
     ul#menu-items {
         margin-left: 5px;
     }
+    .pure-menu li a {
+    padding-left: 0;
+}
 }
 
 /* 
