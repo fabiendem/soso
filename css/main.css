@@ -250,6 +250,7 @@ hr {
     .doodle {
         height: 942px;
     }
+
     #home {
         top: 942px;
     }
@@ -261,6 +262,7 @@ hr {
     .doodle {
         height: 707px;
     }
+
     #home {
         top: 707px;
     }
@@ -273,6 +275,7 @@ hr {
     .doodle {
         height: 589px;
     }
+
     #home {
         top: 589px;
     }
@@ -708,7 +711,6 @@ p.squeezer {
     color: #fff;
 }
 
-
 /*
     ================
     Retina
@@ -745,35 +747,14 @@ only screen and (                min-resolution: 2dppx) {
     }
 }
 
-/*
-    ================
-    Mobile
-    ================
-*/
-/*Until 625px, menu is on 2 lines*/
-@media screen and (max-width: 625px){
-    /*Push down main section*/
-    #home {
-        margin-top: 30px;
+/* Until 535px align left "sonia lahcene graphic design" and menu items*/
+@media screen and (max-width: 534px){   
+    #menu-items {
+        margin-left: 19px;
     }
 
-    .doodle-image {
-        background-image: url('../assets/mobile_doodle.png');
-        bottom: 11%;
-        background-position: 50% 50%;
-        background-size: 80%;
-    }
-
-    .doodle-clouds {
-        display: none;
-    }
-
-    #about, #portfolio {
-        top: -100px;
-    }
-
-    .download-portfolio {
-        bottom: 15%;
+    .pure-menu-heading.sonial {
+        padding-bottom: 0;
     }
 }
 
@@ -783,26 +764,51 @@ only screen and (                min-resolution: 2dppx) {
     ================
 */
 @media
-only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 625px),
-only screen and (   min--moz-device-pixel-ratio: 2) and (max-width: 625px),
-only screen and (     -o-min-device-pixel-ratio: 2/1) and (max-width: 625px),
-only screen and (        min-device-pixel-ratio: 2) and (max-width: 625px),
-only screen and (                min-resolution: 192dpi) and (max-width: 625px),
-only screen and (                min-resolution: 2dppx) and (max-width: 625px) {
+only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 522px),
+only screen and (   min--moz-device-pixel-ratio: 2) and (max-width: 522px),
+only screen and (     -o-min-device-pixel-ratio: 2/1) and (max-width: 522px),
+only screen and (        min-device-pixel-ratio: 2) and (max-width: 522px),
+only screen and (                min-resolution: 192dpi) and (max-width: 522px),
+only screen and (                min-resolution: 2dppx) and (max-width: 522px) {
 
     .doodle-image {
         background-image: url('../assets/mobile_doodle@2x.png');
     }
 }
 
-/* Until 535px align left "sonia lahcene graphic design" and menu items*/
-@media screen and (max-width: 534px){   
-    #menu-items {
-        margin-left: 19px;
+/*
+    ================
+    Mobile
+    ================
+*/
+/* Menu is on 2 lines */
+@media screen and (max-width: 522px){   
+    .doodle {
+        top: 76px;
     }
 
-    .pure-menu-heading.sonial {
-        padding-bottom: 0;
+    /*Push down main section*/
+    #home {
+        margin-top: 30px;
+    }
+
+    .doodle-image {
+        background-image: url('../assets/mobile_doodle.png');
+        background-position: 50% 10%;
+        background-size: 80%;
+    }
+
+    .doodle-clouds {
+        display: none;
+    }
+    
+    /* Anchors */
+    #about, #portfolio {
+        top: -100px;
+    }
+
+    .download-portfolio {
+        bottom: 15%;
     }
 }
 
