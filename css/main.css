@@ -124,7 +124,7 @@ h3 {
 
 .pure-menu.pure-menu-open {
     background-color: rgb(255, 255, 253);
-    padding: 6px 0 0px 10px;
+    padding: 6px 0 6px 10px;
 }
 
 .sonial {    
@@ -708,6 +708,12 @@ p.squeezer {
     color: #fff;
 }
 
+
+/*
+    ================
+    Retina
+    ================
+*/
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -739,6 +745,11 @@ only screen and (                min-resolution: 2dppx) {
     }
 }
 
+/*
+    ================
+    Mobile
+    ================
+*/
 /*Until 625px, menu is on 2 lines*/
 @media screen and (max-width: 625px){
     /*Push down main section*/
@@ -766,7 +777,11 @@ only screen and (                min-resolution: 2dppx) {
     }
 }
 
-/* Mobile retina */
+/*
+    ================
+    Mobile Retina
+    ================
+*/
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 625px),
 only screen and (   min--moz-device-pixel-ratio: 2) and (max-width: 625px),
@@ -777,14 +792,6 @@ only screen and (                min-resolution: 2dppx) and (max-width: 625px) {
 
     .doodle-image {
         background-image: url('../assets/mobile_doodle@2x.png');
-    }
-}
-
-
-/* Until 535px align left "sonia lahcene graphic design" and menu items*/
-@media screen and (max-width: 567px){   
-    figcaption {
-        text-align: center;
     }
 }
 
@@ -866,7 +873,8 @@ Until 301px, menu is on 3 lines
         top: 0;
     }
 
-    #about, #portfolio {
+    #about,
+    #portfolio {
         top: -80px;
     }
 }
