@@ -182,8 +182,8 @@ $(document).ready(function() {
                         if(! $stickyHeader.hasClass('no-transition')) {
                             $stickyHeader.addClass('no-transition');
                         }
-                        _revealStickyHeader(ratioDoodleScrolled);
                     }
+                    _revealStickyHeader(ratioDoodleScrolled);
                 }
             }
             
@@ -222,6 +222,7 @@ $(document).ready(function() {
 
         // Dropdown the filters
         var positionStickyHeader = ratioDoodleScrolled * 100;
+        console.log(positionStickyHeader);
         positionStickyHeader = positionStickyHeader > 100 ? 100 : positionStickyHeader;
         _translateY($stickyHeader, positionStickyHeader + '%');
     };
