@@ -10,11 +10,6 @@ html, body {
     min-height: 100%;
 }
 
-body,
-#home {
-    background-size: 300px 300px;
-    background-repeat: repeat;
-}
 
 body {
     color: #253137;
@@ -23,16 +18,16 @@ body {
     line-height: 20px;
 }
 
-h2 {
-    color: #0096a6;
-    font-size: 1.6em;
-}
-
 h2,
 h3 {
     font-family: 'Reenie Beanie', cursive;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+h2 {
+    color: #0096a6;
+    font-size: 1.6em;
 }
 
 h3 {
@@ -688,10 +683,10 @@ p.squeezer {
     -moz-box-shadow: -1px 1px 3px rgba(40, 92, 102, 0.20);
     -ms-box-shadow: -1px 1px 3px rgba(40, 92, 102, 0.20);
     -o-box-shadow: -1px 1px 3px rgba(40, 92, 102, 0.20);
-    transition: padding 0.2s linear;
     -webkit-transition: padding 0.2s linear;
     -moz-transition: padding 0.2s linear;
     -o-transition: padding 0.2s linear;
+    transition: padding 0.2s linear;
 }
 
 .download-portfolio:hover{
