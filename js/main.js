@@ -11,10 +11,6 @@ $(document).ready(function() {
         });
     };
 
-    var $imageGrid = $('#image-grid');
-    var $filterOptions = $('.filter-options');
-    var $allCategories = $('#all-categories');
-
     _now = Date.now || function() {
         return new Date().getTime();
     };
@@ -95,6 +91,10 @@ $(document).ready(function() {
         $($menuItem).addClass('pure-menu-selected');
     };
 
+    var $imageGrid = $('#image-grid');
+    var $filterOptions = $('.filter-options');
+    var $allCategories = $('#all-categories');
+
     // Menu classes when clicked
     $('#menu-items li').click(function () {
         // Set the class on the clicked item and remove on the others
@@ -127,29 +127,6 @@ $(document).ready(function() {
         duration: 600
     });
 
-    $imageGrid.each(function() { // the containers for all your galleries
-        $(this).magnificPopup({
-            delegate: '.filtered a', // the selector for gallery item
-            type: 'image',
-            gallery: {
-                enabled:true
-            },
-            retina: {
-                ratio: 2
-            },
-            preload: [2,2],
-            removalDelay: 500,
-            callbacks: {
-                beforeOpen: function() {
-                    var self = this;
-                    // just a hack that adds mfp-anim class to markup 
-                    self.st.image.markup = self.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
-                    self.st.mainClass = self.st.el.attr('data-effect');
-                }
-            }
-        });
-    });
-
     var $window = $(window);
     var isScrolling = false;
     var AnimationFrame = window.AnimationFrame;
@@ -158,8 +135,9 @@ $(document).ready(function() {
     var documentHeight = $(document).height();
     var $about = $('#about-me');
     var $stickyHeader = $('#sticky-header');
+    var $doodle = $('#doodle');
     var $doodleImage = $('#doodle-image');
-    var doodleHeight = $('#doodle').height();
+    var doodleHeight = $doodle.height();
     var $cloudLeft = $('#cloud-left');
     var $cloudRight = $('#cloud-right');
     var initialHorizontalPosition = 19; // %
@@ -261,6 +239,7 @@ $(document).ready(function() {
         else {
             $contactSpeaker.removeClass('icon-speaker-s').addClass('icon-speaker-l');
         }
+
         // Colibri
         $movingColibri.removeClass('icon-colibri icon-colibri-d icon-colibri-h')
                       .addClass(spritesColibri[spriteNumber]);
@@ -287,17 +266,23 @@ $(document).ready(function() {
         _refreshOnScroll(scrollTopWindow);
     };
 
-    // Firefox wants the window
-    $window.scroll(_throttle(_onScroll, 60));
-    _onScroll();
+    if (Modernizr.mq("screen and (min-width:523px)")) {
+        // Firefox wants the window
+        $window.scroll(_throttle(_onScroll, 60));
+        _onScroll();
 
-    $window.scrollStopped(function() {
-        _resetColibri();
-    });
+        $window.scrollStopped(function() {
+            _resetColibri();
+        });
+    }
 
-    $imageGrid.shuffle({
-        itemSelector: '.image-block'
-    });
+    var _initShuffle = function() {
+        var $shuffleSizer = $('#shuffle_sizer');
+        $imageGrid.shuffle({
+            itemSelector: '.image-block',
+            sizer: $shuffleSizer
+        });
+    };
 
     // Set up button clicks
     var _setupFilters = function() {
@@ -336,5 +321,69 @@ $(document).ready(function() {
         $btns = null;
     };
 
-    _setupFilters();
+    // Re layout shuffle when images load. This is only needed
+    // below 768 pixels because the .picture-item height is auto and therefore
+    // the height of the picture-item is dependent on the image
+    // I recommend using imagesloaded to determine when an image is loaded
+    // but that doesn't support IE7
+    var _listen = function() {
+        var debouncedLayout = _throttle(function() {
+            $imageGrid.shuffle('update');
+        }, 300);
+
+        // Get all images inside shuffle
+        $imageGrid.find('img').each(function() {
+            var proxyImage;
+
+            // Image already loaded
+            if ( this.complete && this.naturalWidth !== undefined ) {
+                return;
+            }
+
+            // If none of the checks above matched, simulate loading on detached element.
+            proxyImage = new Image();
+            $( proxyImage ).on('load', function() {
+                $(this).off('load');
+                debouncedLayout();
+            });
+
+            proxyImage.src = this.src;
+        });
+
+        // Because this method doesn't seem to be perfect.
+        setTimeout(function() {
+            debouncedLayout();
+        }, 500);
+    };
+
+    var setupShuffle = function() {
+        _initShuffle();
+        _setupFilters();
+        _listen();
+    };
+    setupShuffle();
+
+    $imageGrid.each(function() { // the containers for all your galleries
+        $(this).magnificPopup({
+            delegate: '.filtered a', // the selector for gallery item
+            type: 'image',
+            gallery: {
+                enabled:true
+            },
+            retina: {
+                ratio: 2
+            },
+            preload: [2,2],
+            removalDelay: 500,
+            callbacks: {
+                beforeOpen: function() {
+                    var self = this;
+                    // just a hack that adds mfp-anim class to markup 
+                    self.st.image.markup = self.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+                    self.st.mainClass = self.st.el.attr('data-effect');
+                }
+            }
+        });
+    });
+
 });

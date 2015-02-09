@@ -84,6 +84,7 @@ h3 {
     -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
+
     -webkit-transform: translate3d(0, 100%, 0);
     -moz-transform: translate3d(0, 100%, 0);
     -ms-transform: translate3d(0, 100%, 0);
@@ -200,7 +201,6 @@ hr {
     background-repeat: no-repeat;
     background-position: 40% 50%;
     background-size: 80%;
-    -webkit-transform: translate3d(0,0,0);
 }
 
 .doodle-clouds {
@@ -238,7 +238,6 @@ hr {
     background-color: rgb(255, 255, 253);
     border-top: 1px solid #DBDBDB;
     min-height: 100%;
-    -webkit-transform: translate3d(0,0,0);
     -webkit-perspective: 1000;
     -webkit-backface-visibility: hidden;
 }
@@ -310,6 +309,10 @@ hr {
     margin-top: 2em;
 }
 
+.image-block {
+    -webkit-transform: translate3d(0,0,0);
+}
+
 /* Useful for the shuffle plugin, so it knows how to layout the cards */
 .keep-ratio {
     display: block;
@@ -320,6 +323,10 @@ hr {
     /* Margin under each image block */
     margin-bottom: 2em;
     text-decoration: none;
+}
+
+.shuffle_sizer {
+    visibility: hidden;
 }
 
 .thumbnail {
@@ -704,7 +711,6 @@ p.squeezer {
     font-weight: bolder;
     font-size: 20px;
 }
-
 
 .download-text p {
     margin: 0;
