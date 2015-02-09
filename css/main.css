@@ -66,7 +66,6 @@ h3 {
 }
 
 .sticky-header {
-    display: block;
     background-color: rgb(255, 255, 253);
     margin: 0;
     padding: 0 0 0.7em 1em;
@@ -304,8 +303,8 @@ hr {
     margin-top: 2em;
 }
 
-.image-block {
-    -webkit-transform: translate3d(0,0,0);
+figure {
+    -webkit-transform: translate3d(0px, 0px, 0px);
 }
 
 /* Useful for the shuffle plugin, so it knows how to layout the cards */
@@ -328,16 +327,6 @@ hr {
 	margin: 0 auto;
     border: #FFFFFF 6px solid;
 
-    /* Black and white */
-    -webkit-filter: grayscale(1);
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: grayscale(100%);
-    filter: gray;
-    filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
-        
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
@@ -355,8 +344,21 @@ hr {
     box-shadow: 2px 2px 7px 0px rgba(40, 92, 102, 0.20);
 }
 
+.gray-filter {
+    /* Black and white */
+    /* CREATES JANK */
+    -webkit-filter: grayscale(1);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+    filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+}
+
+/* Remove Black and white */
 .thumbnail:hover {
-    /* Remove Black and white */
     -webkit-filter: none;
     -moz-filter:none;
     -o-filter: none;
@@ -785,12 +787,18 @@ only screen and (                min-resolution: 2dppx) and (max-width: 522px) {
 */
 /* Menu is on 2 lines */
 @media screen and (max-width: 522px){   
+
+    .sticky-header {
+        display: none;
+    }
+
     .doodle {
-        top: 76px;
+        position: static;
     }
 
     /*Push down main section*/
     #home {
+        position: static;
         margin-top: 30px;
     }
 
@@ -802,6 +810,24 @@ only screen and (                min-resolution: 2dppx) and (max-width: 522px) {
 
     .doodle-clouds {
         display: none;
+    }
+
+    .gray-filter {
+        /* Black and white */
+        /* CREATES JANK on mobile */
+        -webkit-filter: none;
+        -moz-filter: none;
+        -ms-filter: none;
+        -o-filter: none;
+        filter: none;
+    }
+
+    .thumbnail:hover {
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
     }
     
     /* Anchors */

@@ -152,10 +152,10 @@ $(document).ready(function() {
             var ratioDoodleScrolled = 1 + (scrollTopWindow - doodleHeight) / doodleHeight;
             // Round with 4 decimals
             ratioDoodleScrolled = +ratioDoodleScrolled.toFixed(4);
-
+            
             // Parallax in the doodle
             _applyParallaxDoodle(ratioDoodleScrolled);
-
+            
             // Sticky header
             if($stickyHeader.length > 0 &&
                 $about.length > 0) {
@@ -186,7 +186,7 @@ $(document).ready(function() {
                     }
                 }
             }
-
+            
             // Animate collibri and speaker
             _animateOnScroll(scrollTopWindow);
 
@@ -248,18 +248,12 @@ $(document).ready(function() {
         spriteNumber = spriteNumber >= numberOfSprites ? 0 : spriteNumber;
     };
 
-    $('#contact').hover(function() {
-        $contactSpeaker.removeClass('icon-speaker-l').addClass('icon-speaker-s');
-    },
-    function() {
-        $contactSpeaker.removeClass('icon-speaker-s').addClass('icon-speaker-l');
-    });
-
     var _resetColibri = function() {
         $movingColibri.removeClass('icon-colibri icon-colibri-d icon-colibri-h')
                       .addClass('icon-colibri');
     };
 
+    var $body = $('body');
     var _onScroll = function() {
         isScrolling = true;
         scrollTopWindow = $window.scrollTop();
@@ -363,27 +357,38 @@ $(document).ready(function() {
     };
     setupShuffle();
 
-    $imageGrid.each(function() { // the containers for all your galleries
-        $(this).magnificPopup({
-            delegate: '.filtered a', // the selector for gallery item
-            type: 'image',
-            gallery: {
-                enabled:true
-            },
-            retina: {
-                ratio: 2
-            },
-            preload: [2,2],
-            removalDelay: 500,
-            callbacks: {
-                beforeOpen: function() {
-                    var self = this;
-                    // just a hack that adds mfp-anim class to markup 
-                    self.st.image.markup = self.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
-                    self.st.mainClass = self.st.el.attr('data-effect');
+    var _setupGallery = function() {       
+        $imageGrid.each(function() { // the containers for all your galleries
+            $(this).magnificPopup({
+                delegate: '.filtered a', // the selector for gallery item
+                type: 'image',
+                gallery: {
+                    enabled:true
+                },
+                retina: {
+                    ratio: 2
+                },
+                preload: [2,2],
+                removalDelay: 500,
+                callbacks: {
+                    beforeOpen: function() {
+                        var self = this;
+                        // just a hack that adds mfp-anim class to markup 
+                        self.st.image.markup = self.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+                        self.st.mainClass = self.st.el.attr('data-effect');
+                    }
                 }
-            }
+            });
         });
-    });
+    };
+    _setupGallery();
 
+    // When user hover contact section, change the speaker
+    // Jank OK
+    $('#contact').hover(function() {
+        $contactSpeaker.removeClass('icon-speaker-l').addClass('icon-speaker-s');
+    },
+    function() {
+        $contactSpeaker.removeClass('icon-speaker-s').addClass('icon-speaker-l');
+    });
 });
