@@ -248,7 +248,7 @@ hr {
     }
 
     #home {
-        top: 942px;
+        top: 753px;
     }
 }
 /** 
@@ -260,7 +260,7 @@ hr {
     }
 
     #home {
-        top: 707px;
+        top: 1004px;
     }
 }
 /**
@@ -269,11 +269,7 @@ hr {
  */
 @media screen and (device-aspect-ratio: 40/71) {
     .doodle {
-        height: 589px;
-    }
-
-    #home {
-        top: 589px;
+        height: 480px;
     }
 }
 
