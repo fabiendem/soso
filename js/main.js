@@ -94,9 +94,7 @@ $(document).ready(function() {
     FastClick.attach(document.body);
 
     var $imageGrid = $('#image-grid');
-    var $filterOptions = $('.filter-options');
-    var $allCategories = $('#all-categories');
-
+    var $allCategories = $('.all-categories');
     // Menu classes when clicked
     $('#menu-items li').click(function () {
         // Set the class on the clicked item and remove on the others
@@ -281,6 +279,7 @@ $(document).ready(function() {
     };
 
     // Set up button clicks
+    var $filterOptions = $('.filter-options');
     var _setupFilters = function() {
         var $btns = $filterOptions.children();
         $btns.on('click', function() {
@@ -303,7 +302,7 @@ $(document).ready(function() {
             }
             else {
                 $('.filter-options .active').removeClass('active');
-                $allCategories.addClass('active');
+                $this.addClass('active');
             }
 
             // Filter elements
