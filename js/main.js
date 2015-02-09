@@ -91,6 +91,8 @@ $(document).ready(function() {
         $($menuItem).addClass('pure-menu-selected');
     };
 
+    FastClick.attach(document.body);
+
     var $imageGrid = $('#image-grid');
     var $filterOptions = $('.filter-options');
     var $allCategories = $('#all-categories');
