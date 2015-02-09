@@ -227,8 +227,8 @@ hr {
 #home {
     position: relative;
     z-index: 8;
-    top: 92vh;
-    margin-top: 50px;
+    top: 98vh;
+    padding-top: 2em;
     background-color: rgb(255, 255, 253);
     border-top: 1px solid #DBDBDB;
     min-height: 100%;
@@ -277,6 +277,11 @@ hr {
     }
 }
 
+.filter-mobile {
+    display: none;
+    margin-bottom: 2em;
+}
+
 .category-title {
     display: inline-block;
     font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -300,7 +305,6 @@ hr {
 
 .image-grid {
     margin-bottom: 2em;
-    margin-top: 2em;
 }
 
 figure {
@@ -811,7 +815,11 @@ only screen and (                min-resolution: 2dppx) and (max-width: 522px) {
     /*Push down main section*/
     #home {
         position: static;
-        margin-top: 30px;
+        padding-top: 30px;
+    }
+
+    .filter-mobile {
+        display: block;
     }
 
     .gray-filter {
