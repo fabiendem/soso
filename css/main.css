@@ -668,6 +668,7 @@ p.squeezer {
 .download-portfolio {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 17px;
+    text-decoration: none;
     position: fixed;
     z-index: 15;
     bottom: 50%;
@@ -690,6 +691,9 @@ p.squeezer {
     -moz-transition: padding 0.2s linear;
     -o-transition: padding 0.2s linear;
     transition: padding 0.2s linear;
+
+    font-weight: bold;
+    color: #fff;
 }
 
 .download-portfolio:hover{
@@ -697,24 +701,21 @@ p.squeezer {
     padding-right: 22px;
 }
 
-.download-portfolio div{
-    font-weight: bolder;
+.download-portfolio div {
     margin-right: 2px;
     text-align: center;
     margin-top: 3px;
 }
 
+.download-text {
+    margin: 0;
+}
+
 .icon-download {
-    color: #fff;
     font-weight: bolder;
     font-size: 20px;
 }
 
-.download-text p {
-    margin: 0;
-    font-weight: bold;
-    color: #fff;
-}
 
 /*
     ================
