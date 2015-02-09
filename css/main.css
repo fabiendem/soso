@@ -794,13 +794,9 @@ only screen and (                min-resolution: 2dppx) and (max-width: 522px) {
 
     .doodle {
         position: static;
+        margin-top: 76px;
     }
 
-    /*Push down main section*/
-    #home {
-        position: static;
-        margin-top: 30px;
-    }
 
     .doodle-image {
         background-image: url('../assets/mobile_doodle.png');
@@ -810,6 +806,12 @@ only screen and (                min-resolution: 2dppx) and (max-width: 522px) {
 
     .doodle-clouds {
         display: none;
+    }
+
+    /*Push down main section*/
+    #home {
+        position: static;
+        margin-top: 30px;
     }
 
     .gray-filter {
@@ -903,10 +905,6 @@ break line after my photo
 Until 301px, menu is on 3 lines
 */
 @media screen and (max-width: 301px){
-    .doodle-image {
-        top: 0;
-    }
-
     #about,
     #portfolio {
         top: -80px;
