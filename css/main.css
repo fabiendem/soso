@@ -399,7 +399,7 @@ img.mfp-img {
 
 /*description caption picture in slider*/
 .mfp-bottom-bar {
-    margin-top: -40px;
+    margin-top: -36px;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 18px;
 }
@@ -418,6 +418,7 @@ img.mfp-img {
     color: #FFBF15;
     margin-right: 8px;
     margin-left: 2px;
+    vertical-align: middle;
 }
 
 /*remove background slider*/
