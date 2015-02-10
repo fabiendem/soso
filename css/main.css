@@ -271,7 +271,7 @@ hr {
  */
 @media screen and (device-aspect-ratio: 40/71) {
     .doodle {
-        height: 480px;
+        height: 440px;
     }
 }
 
@@ -800,8 +800,8 @@ only screen and (                min-resolution: 2dppx) and (max-width: 522px) {
     .doodle {
         position: static;
         margin-top: 76px;
+        height: 88vh;
     }
-
 
     .doodle-image {
         background-image: url('../assets/mobile_doodle.png');
