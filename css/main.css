@@ -238,43 +238,6 @@ hr {
     -webkit-backface-visibility: hidden;
 }
 
-/*
-    Fix vh support on iOS7
-*/
-/** 
- * iPad with portrait orientation.
- */
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
-    .doodle {
-        height: 942px;
-    }
-
-    #home {
-        top: 753px;
-    }
-}
-/** 
- * iPad with landscape orientation.
- */
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
-    .doodle {
-        height: 707px;
-    }
-
-    #home {
-        top: 1004px;
-    }
-}
-/**
- * iPhone 5
- * You can also target devices with aspect ratio.
- */
-@media screen and (device-aspect-ratio: 40/71) {
-    .doodle {
-        height: 440px;
-    }
-}
-
 .filter-mobile {
     display: none;
     margin-bottom: 2em;
@@ -852,7 +815,12 @@ only screen and (                min-resolution: 2dppx) and (max-width: 522px) {
 }
 
 /* Until 490px stick the contacts details under the icon and title*/
-@media screen and (max-width: 490px){   
+@media screen and (max-width: 490px){
+    .doodle-image {
+        background-position: 50% 20%;
+        background-size: 70%;
+    }
+
     .about {
         margin-right: 1em;
     }
@@ -917,5 +885,42 @@ Until 301px, menu is on 3 lines
     #about,
     #portfolio {
         top: -80px;
+    }
+}
+
+/*
+    Fix vh support on iOS7
+*/
+/** 
+ * iPad with portrait orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+    .doodle {
+        height: 942px;
+    }
+
+    #home {
+        top: 753px;
+    }
+}
+/** 
+ * iPad with landscape orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+    .doodle {
+        height: 707px;
+    }
+
+    #home {
+        top: 1004px;
+    }
+}
+/**
+ * iPhone 5
+ * You can also target devices with aspect ratio.
+ */
+@media screen and (device-aspect-ratio: 40/71) {
+    .doodle {
+        height: 440px;
     }
 }
