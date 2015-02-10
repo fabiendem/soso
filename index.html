@@ -58,7 +58,7 @@
           <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.5.0/base-min.css&pure/0.5.0/grids-min.css&pure/0.5.0/grids-responsive-old-ie-min.css&pure/0.5.0/menus-min.css">
         <![endif]-->
         <!--[if gt IE 8]><!-->
-          <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.5.0/base-min.css&pure/0.5.0/grids-min.css&pure/0.5.0/grids-responsive-min.css&pure/0.5.0/menus-min.css">
+        <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.5.0/base-min.css&pure/0.5.0/grids-min.css&pure/0.5.0/grids-responsive-min.css&pure/0.5.0/menus-min.css">
         <!--<![endif]-->
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css">
         <link rel="stylesheet" href="css/vectorfont.css">
@@ -66,24 +66,6 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-
-         <script type="text/javascript">
-            // Console-polyfill. MIT license.
-            // https://github.com/paulmillr/console-polyfill
-            // Make it safe to do console.log() always.
-            (function(con) {
-              'use strict';
-              var prop, method;
-              var empty = {};
-              var dummy = function() {};
-              var properties = 'memory'.split(',');
-              var methods = ('assert,clear,count,debug,dir,dirxml,error,exception,group,' +
-                 'groupCollapsed,groupEnd,info,log,markTimeline,profile,profiles,profileEnd,' +
-                 'show,table,time,timeEnd,timeline,timelineEnd,timeStamp,trace,warn').split(',');
-              while (prop = properties.pop()) con[prop] = con[prop] || empty;
-              while (method = methods.pop()) con[method] = con[method] || dummy;
-            })(this.console = this.console || {}); // Using `this` for web workers.
-        </script>
     </head>
     <body>
         <header class="header-fixed">
@@ -439,7 +421,23 @@
             l.parentNode.insertBefore(a,l)}(window,document,'script','ga'));
             ga('create','UA-55025126-1');ga('send','pageview');
         </script>
-
+         <script type="text/javascript">
+            // Console-polyfill. MIT license.
+            // https://github.com/paulmillr/console-polyfill
+            // Make it safe to do console.log() always.
+            (function(con) {
+              'use strict';
+              var prop, method;
+              var empty = {};
+              var dummy = function() {};
+              var properties = 'memory'.split(',');
+              var methods = ('assert,clear,count,debug,dir,dirxml,error,exception,group,' +
+                 'groupCollapsed,groupEnd,info,log,markTimeline,profile,profiles,profileEnd,' +
+                 'show,table,time,timeEnd,timeline,timelineEnd,timeStamp,trace,warn').split(',');
+              while (prop = properties.pop()) con[prop] = con[prop] || empty;
+              while (method = methods.pop()) con[method] = con[method] || dummy;
+            })(this.console = this.console || {}); // Using `this` for web workers.
+        </script>
         <script>
             console.log('Hey %cdeveloper%c, contact me at %ccontact@sonialahcene.com%c ;) I could help you, I am an illustrator and do vector icons, logos, etc.', 'font-weight: bold; font-size: 1.5em;', 'font-weight: normal; font-size: normal;', 'font-weight: bold; font-size: 1.5em;', 'font-weight: normal; font-size: normal;');
         </script>
