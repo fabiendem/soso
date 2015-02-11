@@ -91,6 +91,7 @@ $(document).ready(function() {
         $($menuItem).addClass('pure-menu-selected');
     };
 
+    // Fast click !!
     FastClick.attach(document.body);
 
     var $imageGrid = $('#image-grid');
@@ -357,6 +358,17 @@ $(document).ready(function() {
         _listen();
     };
     setupShuffle();
+
+    $(".thumbnail").unveil(200, function() {
+        var $self = $(this);
+        $self.load(function() {
+            $self.addClass('thumbnail-box-shadow')
+                 .addClass('gray-filter')
+                 .attr('width', '100%')
+                 .attr('height', '100%');
+            $self.next().css('display', 'block');
+        });
+    });
 
     var _setupGallery = function() {       
         $imageGrid.each(function() { // the containers for all your galleries

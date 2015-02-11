@@ -302,7 +302,9 @@ figure {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+}
 
+.thumbnail-box-shadow {
     -webkit-box-shadow: 2px 2px 7px 0px rgba(40, 92, 102, 0.20);
     -moz-box-shadow: 2px 2px 7px 0px rgba(40, 92, 102, 0.20);
     -ms-box-shadow: 2px 2px 7px 0px rgba(40, 92, 102, 0.20);
@@ -337,6 +339,7 @@ figure {
 }
 
 figcaption {
+    display: none;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     color: #0096a6;
     margin-top: 6px;
@@ -719,6 +722,12 @@ only screen and (                min-resolution: 2dppx) {
     }
 }
 
+@media screen and (max-width: 567px){   
+    figcaption {
+        text-align: center;
+    }
+}
+
 /* Until 535px align left "sonia lahcene graphic design" and menu items*/
 @media screen and (max-width: 534px){   
     #menu-items {
@@ -803,7 +812,7 @@ only screen and (                min-resolution: 2dppx) and (max-width: 522px) {
         -o-transform: none;
         transform: none;
     }
-    
+
     /* Anchors */
     #about, #portfolio {
         top: -100px;
@@ -920,6 +929,12 @@ Until 301px, menu is on 3 lines
  * You can also target devices with aspect ratio.
  */
 @media screen and (device-aspect-ratio: 40/71) {
+    .doodle {
+        height: 440px;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .doodle {
         height: 440px;
     }
