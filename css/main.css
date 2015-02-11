@@ -338,7 +338,7 @@ figure {
     transform: scale(1.05, 1.05);
 }
 
-figcaption {
+.thumbnail-caption {
     display: none;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     color: #0096a6;
@@ -723,7 +723,7 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 @media screen and (max-width: 567px){   
-    figcaption {
+    .thumbnail-caption {
         text-align: center;
     }
 }
