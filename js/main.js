@@ -91,9 +91,6 @@ $(document).ready(function() {
         $($menuItem).addClass('pure-menu-selected');
     };
 
-    // Fast click !!
-    FastClick.attach(document.body);
-
     var $imageGrid = $('#image-grid');
     var $allCategories = $('.all-categories');
     // Menu classes when clicked
