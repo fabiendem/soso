@@ -510,6 +510,10 @@ So the menu does not hide the section when you click on about
     margin-right: 10px;
 }
 
+.date-2015 {
+    margin-left: 3.1em;
+}
+
 .work-done {
     margin-top: 5px;
     padding: 0;
