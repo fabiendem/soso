@@ -96,7 +96,7 @@ a {
 }
 
 #summary-cv div p {
-	padding-left: 2.1em;
+	padding-left: 1.7em;
 	padding-right: 4.8em;
 	font-size: 14px;
 }
@@ -162,8 +162,8 @@ h5 {
 .label {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	color: white;
-	background-color: #FFBF15;	
-	padding: 10px 15px 8px 15px;
+	background-color: #FFBF15;  
+	padding: 10px 10px 8px 10px;
 	-webkit-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
 	-moz-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
 	-ms-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
