@@ -10,8 +10,8 @@ a {
 	margin: 60px auto 10px;
 	max-width: 1000px;
 	background-color: rgb(255, 255, 253);
-	font-size: 17px;
-	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 12px;
+	font-family: 'Roboto', sans-serif;
 }
 
 #header-cv {
@@ -29,6 +29,7 @@ a {
 
 .name-cv {
 	font-weight: 400;
+	font-size: 26px;
 	text-transform: uppercase;
 	margin-bottom: 11px;
 	margin-top: 20px;
@@ -37,17 +38,18 @@ a {
 
 .job-cv {
 	font-weight: 400;
-	color: #FFBF15;
-	margin-top: 0;
-	margin-bottom: 12px;
-	font-family: 'Yanone Kaffeesatz', sans-serif;
+  	color: #FFBF15;
+  	margin-top: 0;
+  	margin-bottom: 4px;
+  	font-family: 'Yanone Kaffeesatz', sans-serif;
+  	font-size: 24px;;
 }
 
 .subtitle-cv {
 	font-weight: 100;
 	margin: 1px 0 1px 0;
 	font-family: 'Roboto', sans-serif;
-	font-size: 18px;
+	font-size: 15px;
 }
 
 /*contact CV*/
@@ -90,18 +92,21 @@ a {
 
 #summary-cv {
 	max-width: 1245px;
-	margin-top: 20px;
+	margin-top: 30px;
 }
 
 #summary-cv div p {
 	padding-left: 2.1em;
 	padding-right: 4.8em;
-	font-size: 15px;
-	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
 }
 
 
 /*--blocks cv--*/
+
+h5 {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+}
 
 .job-title {
 	margin:0;
@@ -123,7 +128,6 @@ a {
 	-ms-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
 	-o-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
 	box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
-	font-size: 16px;
 	color: #36464e;
 	padding: 12px 16px 12px 12px;
 	margin-bottom: 10px;
@@ -138,10 +142,6 @@ a {
 	padding-left: 16px;
 	margin-top: 8px;
 	margin-bottom: 0;
-}
-
-.list-job li {
-	margin-bottom: 5px;
 }
 
 .job-now li a{
@@ -160,16 +160,18 @@ a {
 }
 
 .label {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	color: white;
 	background-color: #FFBF15;	
-	padding: 10px 15px 10px 15px;
+	padding: 10px 15px 8px 15px;
 	-webkit-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
 	-moz-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
 	-ms-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
 	-o-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
 	box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
 	display: inline-block;
-	font-size: 17px;
+	font-size: 18px;
+	letter-spacing: 0.01em;
 }
 
 #block-right {
@@ -177,13 +179,14 @@ a {
 }
 
 .time {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	position: absolute;
 	top: 10px;
 	right: 7px;
 	font-weight: bolder;
 	display: inline-block;
 	font-size: 15px;
-	background-color: rgba(190, 145, 1, 0.12);
+	background-color: #fff8e5;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -195,16 +198,20 @@ a {
 #skills ul {
 	padding-left: 0;
 	max-width: 900px;
+	padding-left: 0;
+  	max-width: 900px;
+  	margin: 0;
+  	font-size: 12px;
+  	font-weight: bold;
 }
 
 
 #skills ul li {
 	list-style: none;
 	display: inline-block;
-	background-color: #ffffff; 
 	width: auto;
 	margin: 0 5px 10px 0; 
-	padding: 12px;
+	padding: 7px;
 	-webkit-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
 	-moz-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
 	-ms-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
@@ -212,20 +219,19 @@ a {
 	box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
 }
 
-.good {
-	color: #00828e;
+.advanced {
+	color: white;
+  	background-color: #00abc0;
 }
 
-.goodbis {
-	color: #0096a6;
+.intermediate {
+	color: white;
+  	background-color: #5ebfcc;
 }
 
-.average {
-	color: #4ccfe0;
-}
-
-.debutant{
-	color: #b1eaf1;
+.basic{
+	color: white;
+  	background-color: #98d1d9;
 }
 
 /*--work--*/
@@ -239,6 +245,11 @@ a {
 	padding-left: 0;
 	margin-bottom: 0;
 	margin-top: 8px;
+}
+
+.job-now {
+
+	line-height: 17px;
 }
 
 /*--education--*/
@@ -308,6 +319,7 @@ a {
 
 
 .timeline-now {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	color: #fff;
 	font-size: 15px;
 	font-weight: bold;
@@ -318,6 +330,7 @@ a {
 }
 
 .timeline-one-date {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	color: #fff;
 	font-size: 15px;
 	font-weight: bold;
@@ -330,6 +343,7 @@ a {
 
 
 .timeline-two-dates {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	color: #fff;
 	font-size: 15px;
 	font-weight: bold;
@@ -379,10 +393,11 @@ a {
 #language ul li {
 	list-style: none;
 	display: inline-block;
-	background-color: #ffffff; 
 	width: auto;
 	margin: 0 5px 10px 0; 
-	padding: 8px;
+	padding: 7px;
+  	font-size: 12px;
+  	font-weight: bold;
 	-webkit-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
 	-moz-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
 	-ms-box-shadow: 1px 1px 3px rgba(40, 92, 102, 0.15);
