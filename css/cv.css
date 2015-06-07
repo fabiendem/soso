@@ -409,6 +409,8 @@ h5 {
 
 
 .download {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 17px;
 	position: fixed;
 	bottom: 50%;
 	right: 0;
