@@ -18,6 +18,36 @@ body {
     line-height: 20px;
 }
 
+/*Highlighted text*/
+
+p::selection, li::selection, a::selection, li em::selection {
+ 	background: #0096a6; /* WebKit/Blink Browsers */
+ 	color: white;
+}
+p::-moz-selection,li::-moz-selection, a::-moz-selection, li em::-moz-selection {
+ 	background: #0096a6; /* Gecko Browsers */
+ 	color: white;
+}
+
+h2::selection {
+	background: #FFBF15; /* WebKit/Blink Browsers */
+  	color: white;
+}
+
+h2::-moz-selection {
+ 	background: #FFBF15; /* Gecko Browsers */
+ 	color: white;
+}
+h3::selection {
+	background: #253137; /* WebKit/Blink Browsers */
+  	color: white;
+}
+
+h3::-moz-selection {
+ 	background: #253137; /* Gecko Browsers */
+ 	color: white;
+}
+
 h2,
 h3 {
     font-family: 'Reenie Beanie', sans-serif;
@@ -555,6 +585,7 @@ div.contact-speaker {
 .contact p a {
     color: #253137;
     text-decoration: none;
+    border-bottom: 2px solid #0096a6;
     font-weight: 700;
 }
 
@@ -574,6 +605,7 @@ div.contact-speaker {
     text-decoration: none;
     padding-right: 5px;
     font-weight: normal;
+    border-bottom: none;
 }
 
 .contact p a.icon-tumblr:hover,
