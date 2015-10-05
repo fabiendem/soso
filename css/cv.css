@@ -138,6 +138,10 @@ h5 {
 	width: 350px;
 }
 
+.box-cv ul li a {
+	color: #36464e;
+}
+
 .list-job {
 	padding-left: 16px;
 	margin-top: 8px;
