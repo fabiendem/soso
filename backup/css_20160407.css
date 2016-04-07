@@ -522,6 +522,15 @@ So the menu does not hide the section when you click on about
     margin: 0 3em 0 1em;
 }
 
+.client h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 25px 0 5px;
+}
+
+.client p {
+    margin-top: 0;
+}
 
 .about h2 {
     margin: 1em 0;
@@ -535,73 +544,25 @@ So the menu does not hide the section when you click on about
     max-width: 150px;
 }
 
-
-.client h3 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    margin: 25px 0 5px;
+.date {
+    color: #36464e;
+    font-weight: bold;
+    margin-right: 10px;
 }
 
-.client p {
-    margin-top: 0;
+.date-2015 {
+    margin-left: 3.2em;
 }
 
-.client .list-client{
-    margin: 30px 0 0;
-    padding: 10px;
-}
-.list-client div {
-    display: inline-block;
-    margin: 0 50px 20px 0;
-    vertical-align: middle;
+.work-done {
+    margin-top: 5px;
+    padding: 0;
 }
 
-.list-client div:nth-child(4) {
-    margin: 0 70px 20px 20px; 
+.work-done li {
+    list-style: none;
+    margin-bottom: 5px;
 }
-
-.list-client div a {
-    text-decoration: none;
-}
-
-.icon-client_hootsuite,
-.icon-client_timberland,
-.icon-client_ladbrokes,
-.icon-client_kaplan,
-.icon-client_lerobert,
-.icon-client_orange {
-    color:#6F7C82;
-}
-
-.list-client div a .icon-client_hootsuite:hover,
-.list-client div a .icon-client_timberland:hover,
-.list-client div a .icon-client_ladbrokes:hover,
-.list-client div a .icon-client_kaplan:hover,
-.list-client div a .icon-client_lerobert:hover,
-.list-client div a .icon-client_orange:hover {
-    color:#36464E;
-}
-
-
-.icon-client_hootsuite {
-    font-size: 30px;
-}
-.icon-client_timberland{
-    font-size: 25px;
-}
-.icon-client_ladbrokes {
-    font-size: 22px;
-}
-.icon-client_kaplan {
-    font-size: 35px;
-}
-.icon-client_lerobert {
-    font-size: 28px;
-}
-.icon-client_orange {
-    font-size: 45px;
-}
-
 
 .contact {
     margin-bottom: 16px;
