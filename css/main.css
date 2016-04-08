@@ -38,15 +38,21 @@ h2::-moz-selection {
  	background: #FFBF15; /* Gecko Browsers */
  	color: white;
 }
-h3::selection {
+
+h3::selection,
+h5::selection {
 	background: #FFBF15; /* WebKit/Blink Browsers */
   	color: #253137;
 }
 
-h3::-moz-selection {
+h3::-moz-selection,
+h5::-moz-selection {
  	background: #FFBF15; /* Gecko Browsers */
  	color: #253137;
 }
+
+
+
 
 h2,
 h3 {
