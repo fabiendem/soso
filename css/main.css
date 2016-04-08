@@ -557,11 +557,11 @@ So the menu does not hide the section when you click on about
 }
 
 .list-client div:nth-child(3) {
-    margin: 0 70px 20px 0;
+    margin: 0 60px 20px 0;
 }
 
 .list-client div:nth-child(4) {
-    margin: 0 70px 20px 0; 
+    margin: 0 55px 20px 0; 
 }
 
 .list-client div a {
