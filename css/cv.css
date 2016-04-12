@@ -594,65 +594,71 @@ h5 {
 	}
 
 }
-@media screen and (max-width: 467px){ /* time-line*/
+
+@media screen and (max-width: 500px){ /* time-line and box cv*/
 	.box-cv {
-		width: 277px;
+		width: 320px;
+		padding-right: 0;
 	}
-	.box-cv-client {
-		width: 277px;
+
+	.job-location {
+		width: 210px;
 	}
 	.circles, .circle {
 		margin-right: 5px;
+	}
+}
+
+@media screen and (max-width: 450px){ /* time-line and box cv*/
+	.box-cv {
+		width: 295px;
+		padding-right: 0;
+		padding-left: 10px;
+	}
+}
+
+@media screen and (max-width: 420px){ /* time-line and box cv*/
+	.box-cv {
+		width: 250px;
+	}
+	.circles, .circle {
+		margin-right: 3px;
 	}
 	.list-client-cv div {
     display: block;
     margin: 10px 30px 0 0;
     vertical-align: middle;
+	}
+    .job-now li {
+    	max-width: 220px;
+    }
 }
 
-@media screen and (max-width: 389px) {
+@media screen and (max-width: 380px) {
 	.box-cv {
-		width: 250px;
+		width: 240px;
 	}
+}
 
-	.box-cv-client {
-		width: 250px;
+
+@media screen and (max-width: 360px) {
+
+	.box-cv {
+		width: 198px;
+    	padding-right: 5px;
 	}
-	.job-title {
+	.job-location {
 		width: 160px;
 	}
-}
-
-
-@media screen and (max-width: 362px) {
-
-	.box-cv {
-		width: 220px;
-	}
-
-	.box-cv-client {
-		width: 220px;
+	.circle, .circles {
+		margin-right: 2px;
 	}
 }
-
-@media screen and (max-width: 362px) {
-	.box-cv {
-		width: 205px;
-	}
-
-	.box-cv-client {
-		width: 205px;
-	}
-}
-
 
 @media screen and (max-width: 320px){
-	.box-cv {
-		width: 200px;
-	}
 
-	.box-cv-client {
-		width: 200px;
+	.circle, .circles {
+		margin-right: 1px;
 	}
 
 	.job-title {
