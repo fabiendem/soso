@@ -949,6 +949,15 @@ only screen and (                min-resolution: 2dppx) and (max-width: 522px) {
     }
 }
 
+
+/* Until 440px one column client's logos*/
+@media screen and (max-width: 440px){
+    .list-client div {
+        display: block;
+    }
+}
+
+
 /* 
 Until 410px,
 remove the colibri in the menu and reshape the menu,
