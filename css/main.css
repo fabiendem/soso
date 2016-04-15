@@ -271,7 +271,6 @@ hr {
     top: 98vh;
     padding-top: 2em;
     background-color: rgb(255, 255, 253);
-    border-top: 1px solid #DBDBDB;
     min-height: 100%;
     -webkit-perspective: 1000;
     -webkit-backface-visibility: hidden;
