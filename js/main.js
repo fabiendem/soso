@@ -221,6 +221,14 @@ $(document).ready(function() {
         // Dropdown the filters
         var positionStickyHeader = ratioDoodleScrolled * 100;
         positionStickyHeader = positionStickyHeader > 100 ? 100 : positionStickyHeader;
+
+        if(positionStickyHeader > 0) {
+            $nav.removeClass('nav-shadow');
+        }
+        else {
+            $nav.addClass('nav-shadow');
+        }
+
         _translateY($stickyHeader, positionStickyHeader + '%');
     };
 

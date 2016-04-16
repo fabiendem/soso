@@ -103,6 +103,11 @@ h3 {
     top: 0;
 }
 
+
+.nav-shadow {
+    -webkit-box-shadow: rgba(40,92,102,.2) -1px 1px 3px;
+}
+
 .sticky-header {
     background-color: rgb(255, 255, 253);
     margin: 0;
