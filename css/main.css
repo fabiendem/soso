@@ -223,11 +223,11 @@ h3 {
 /*new label*/
 .new-feature {
     position: absolute;
-    top: -5px;
-    right: -7px;
+    top: -6px;
+    right: -2px;
     -ms-transform: rotate(7deg);
     -webkit-transform: rotate(7deg);
-    transform: rotate(7deg);
+    transform: rotate(14deg);
     color: #0096a6;
     font-weight: bold;
 }
