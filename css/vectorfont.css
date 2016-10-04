@@ -1,93 +1,108 @@
 @font-face {
-    font-family: 'icomoon';
-    src:    url('fonts/icomoon.eot?27ib6x');
-    src:    url('fonts/icomoon.eot?27ib6x#iefix') format('embedded-opentype'),
-        url('fonts/icomoon.ttf?27ib6x') format('truetype'),
-        url('fonts/icomoon.woff?27ib6x') format('woff'),
-        url('fonts/icomoon.svg?27ib6x#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?rl4rue');
+  src:  url('fonts/icomoon.eot?rl4rue#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?rl4rue') format('truetype'),
+    url('fonts/icomoon.woff?rl4rue') format('woff'),
+    url('fonts/icomoon.svg?rl4rue#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-colibri-d:before {
-    content: "\e60a";
+  content: "\e60a";
 }
 .icon-colibri-h:before {
-    content: "\e60b";
+  content: "\e60b";
 }
 .icon-speaker-l:before {
-    content: "\e60d";
+  content: "\e60d";
 }
 .icon-colibri:before {
-    content: "\e60c";
+  content: "\e60c";
 }
 .icon-speaker-s:before {
-    content: "\e60e";
-}
-.icon-client_hootsuite:before {
-    content: "\e901";
-}
-.icon-client_kaplan:before {
-    content: "\e902";
-}
-.icon-client_ladbrokes:before {
-    content: "\e903";
-}
-.icon-client_lerobert:before {
-    content: "\e904";
-}
-.icon-client_orange:before {
-    content: "\e905";
-}
-.icon-client_timberland:before {
-    content: "\e906";
-}
-.icon-behance:before {
-    content: "\e900";
+  content: "\e60e";
 }
 .icon-download:before {
-    content: "\e600";
+  content: "\e600";
 }
 .icon-cv:before {
-    content: "\e601";
+  content: "\e601";
 }
 .icon-website:before {
-    content: "\e602";
+  content: "\e602";
 }
 .icon-tumblr:before {
-    content: "\e603";
+  content: "\e603";
 }
 .icon-contact:before {
-    content: "\e604";
+  content: "\e604";
 }
 .icon-colibri2:before {
-    content: "\e605";
+  content: "\e605";
 }
 .icon-squeezer:before {
-    content: "\e606";
+  content: "\e606";
+}
+.icon-behance:before {
+  content: "\e900";
 }
 .icon-email:before {
-    content: "\e607";
+  content: "\e607";
 }
 .icon-linkdn:before {
-    content: "\e608";
+  content: "\e608";
 }
 .icon-info:before {
-    content: "\e609";
+  content: "\e609";
+}
+.icon-client_ge:before {
+  content: "\e908";
+}
+.icon-client_hootsuite:before {
+  content: "\e901";
+}
+.icon-client_kaplan:before {
+  content: "\e902";
+}
+.icon-client_ladbrokes:before {
+  content: "\e903";
+}
+.icon-client_lerobert:before {
+  content: "\e904";
+}
+.icon-client_orange:before {
+  content: "\e905";
+}
+.icon-client_timberland:before {
+  content: "\e906";
+}
+.icon-client_brands2life:before {
+  content: "\e907";
+}
+.icon-client_linkedin:before {
+  content: "\e909";
+}
+.icon-client_mediablaze:before {
+  content: "\e90a";
+}
+.icon-client_storylab:before {
+  content: "\e90b";
 }
 

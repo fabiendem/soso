@@ -312,6 +312,11 @@ h5 {
     text-decoration: none;
 }
 
+.list-client-cv div a .icon-client_brands2life:hover,
+.list-client-cv div a .icon-client_mediablaze:hover,
+.list-client-cv div a .icon-client_ge:hover,
+.list-client-cv div a .icon-client_storylab:hover,
+.list-client-cv div a .icon-client_linkedin:hover,
 .list-client-cv div a .icon-client_hootsuite:hover,
 .list-client-cv div a .icon-client_timberland:hover,
 .list-client-cv div a .icon-client_ladbrokes:hover,
