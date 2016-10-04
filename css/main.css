@@ -583,21 +583,18 @@ So the menu does not hide the section when you click on about
 .list-client div {
     display: inline-block;
     margin: 0 50px 20px 0;
-    vertical-align: middle;
-}
-
-.list-client div:nth-child(3) {
-    margin: 0 60px 20px 0;
-}
-
-.list-client div:nth-child(4) {
-    margin: 0 55px 20px 0; 
+    vertical-align: top;
 }
 
 .list-client div a {
     text-decoration: none;
 }
 
+.icon-client_brands2life,
+.icon-client_mediablaze,
+.icon-client_ge,
+.icon-client_storylab,
+.icon-client_linkedin,
 .icon-client_hootsuite,
 .icon-client_timberland,
 .icon-client_ladbrokes,
@@ -607,6 +604,11 @@ So the menu does not hide the section when you click on about
     color:#6F7C82;
 }
 
+.list-client div a .icon-client_brands2life:hover,
+.list-client div a .icon-client_mediablaze:hover,
+.list-client div a .icon-client_ge:hover,
+.list-client div a .icon-client_storylab:hover,
+.list-client div a .icon-client_linkedin:hover,
 .list-client div a .icon-client_hootsuite:hover,
 .list-client div a .icon-client_timberland:hover,
 .list-client div a .icon-client_ladbrokes:hover,
@@ -617,6 +619,21 @@ So the menu does not hide the section when you click on about
 }
 
 
+.icon-client_brands2life {
+    font-size: 40px;
+}
+.icon-client_mediablaze {
+    font-size: 42px;
+}
+.icon-client_ge {
+    font-size: 46px;
+}
+.icon-client_storylab {
+    font-size: 37px;
+}
+.icon-client_linkedin {
+    font-size: 28px;
+}
 .icon-client_hootsuite {
     font-size: 30px;
 }
@@ -630,7 +647,7 @@ So the menu does not hide the section when you click on about
     font-size: 35px;
 }
 .icon-client_lerobert {
-    font-size: 28px;
+    font-size: 25px;
 }
 .icon-client_orange {
     font-size: 45px;
