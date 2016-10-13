@@ -139,9 +139,13 @@ h5 {
 	width: 350px;
 }
 
+.job-now-multiple {
+	margin-bottom: 12px;
+}
 
 
-.box-cv ul li a {
+.box-cv ul li a, 
+.job-now-multiple ul li a {
 	color: #36464e;
 }
 
@@ -154,7 +158,8 @@ h5 {
 	line-height: 16px;
 }
 
-.job-now li a{
+.job-now li a, 
+.job-now-multiple li a{
 	color: #36464e;
 }
 
@@ -253,6 +258,14 @@ h5 {
 	list-style: none;
 	padding-left: 0;
 	margin-bottom: 0;
+	margin-top: 4px;
+	line-height: 17px;
+}
+
+.job-now-multiple {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 12px;
 	margin-top: 4px;
 	line-height: 17px;
 }
@@ -634,7 +647,7 @@ h5 {
     margin: 10px 30px 0 0;
     vertical-align: middle;
 	}
-    .job-now li {
+    .job-now li, .job-now-multiple li {
     	max-width: 220px;
     }
 }
