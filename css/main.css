@@ -877,23 +877,6 @@ only screen and (                min-resolution: 2dppx) {
     }
 }
 
-/*
-    ================
-    Mobile Retina
-    ================
-*/
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 522px),
-only screen and (   min--moz-device-pixel-ratio: 2) and (max-width: 522px),
-only screen and (     -o-min-device-pixel-ratio: 2/1) and (max-width: 522px),
-only screen and (        min-device-pixel-ratio: 2) and (max-width: 522px),
-only screen and (                min-resolution: 192dpi) and (max-width: 522px),
-only screen and (                min-resolution: 2dppx) and (max-width: 522px) {
-
-    .doodle-image {
-        background-image: url('../assets/mobile_doodle17@2x.png');
-    }
-}
 
 /*
     ================
@@ -913,7 +896,7 @@ only screen and (                min-resolution: 2dppx) and (max-width: 522px) {
     }
 
 /* Menu is on 2 lines */
-@media screen and (max-width: 600px){   
+@media screen and (max-width: 620px){   
 
     .sticky-header {
         display: none;
@@ -928,7 +911,6 @@ only screen and (                min-resolution: 2dppx) and (max-width: 522px) {
     .doodle-image {
         background-image: url('../assets/mobile_doodle17.png');
         background-position: 50% 25%;
-        background-size: 80%;
     }
 
 
@@ -972,10 +954,6 @@ only screen and (                min-resolution: 2dppx) and (max-width: 522px) {
 
 /* Until 490px stick the contacts details under the icon and title*/
 @media screen and (max-width: 490px){
-    .doodle-image {
-        background-position: 50% 25%;
-        background-size: 100%;
-    }
 
     .about {
         margin-right: 1em;
@@ -1052,6 +1030,25 @@ Until 301px, menu is on 3 lines
         top: -80px;
     }
 }
+
+/*
+    ================
+    Mobile Retina
+    ================
+*/
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 620px),
+only screen and (   min--moz-device-pixel-ratio: 2) and (max-width: 620px),
+only screen and (     -o-min-device-pixel-ratio: 2/1) and (max-width: 620px),
+only screen and (        min-device-pixel-ratio: 2) and (max-width: 620px),
+only screen and (                min-resolution: 192dpi) and (max-width: 620px),
+only screen and (                min-resolution: 2dppx) and (max-width: 620px) {
+
+    .doodle-image {
+        background-image: url('../assets/mobile_doodle17@2x.png');
+    }
+}
+
 
 /*
     Fix vh support on iOS7
