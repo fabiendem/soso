@@ -600,11 +600,22 @@ h5 {
 		background-color: rgba(20, 177, 187, 0.65);
 }
 
-/* Until 760px, there is not enough space to show the contact icons */
-@media screen and (max-width: 758px){
+@media screen and (max-width: 768px){
     .contact-cv {
         float: none;
     }
+}
+
+
+/* Until 760px, there is not enough space to show the contact icons */
+@media screen and (max-width: 758px){
+    	.pdf-cv {
+			margin: 85px auto 0;
+			width: 95%;
+			height: 100%;
+			display: block;
+		}
+
 }
 @media screen and (max-width: 600px){
 	#header-cv div {
