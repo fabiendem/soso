@@ -1,3 +1,9 @@
+@font-face {
+	font-family: JohnstonITC;
+    src: url(assets/fotns/johnston_itc_bold_os.ttf.woff);
+}
+
+
 .body-cv {
 	background-color: #FFBF15;
 }
