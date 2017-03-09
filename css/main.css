@@ -901,8 +901,8 @@ only screen and (                min-resolution: 2dppx) {
 /* doodle ipad portrait */
 @media screen and (max-width: 768px){ 
     .doodle-image {
-        background-position: 50% 25%;
-        background-size: 80%;
+        background-position: 50% 20%;
+        background-size: 85%;
     }
 
     .doodle-clouds {
@@ -1097,12 +1097,20 @@ only screen and (                min-resolution: 2dppx) and (max-width: 620px) {
  */
 @media screen and (device-aspect-ratio: 40/71) {
     .doodle {
-        height: 440px;
+        height: 380px;
+    }
+    .doodle-image {
+        background-position: 50% 45%;
+        background-size: 90%;
     }
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .doodle {
-        height: 440px;
+        height: 380px;
+    }
+    .doodle-image {
+        background-position: 50% 45%;
+        background-size: 90%;
     }
 }
