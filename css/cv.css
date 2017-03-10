@@ -28,6 +28,13 @@ a {
 	font-size: 14px;
 	font-family: 'Source Sans Pro', sans-serif;
 }
+
+
+h3.title-cv::selection, h4.degree-role::selection {
+    background: #66c0c9;
+}
+
+
 h3.title-cv {
 	font-family: 'JohnstonITC', sans-serif;
 	margin-bottom: 6px;
@@ -106,6 +113,10 @@ h5.school-company {
 	margin: 8px 10px 0px 0;
 	font-family: 'JohnstonITC', sans-serif;
 	line-height: 33px;
+}
+
+.name-cv::selection {
+	background-color: #f7f5f0;
 }
 
 .main-name .icon-colibri2 {
@@ -249,6 +260,10 @@ h5.school-company {
 
 .skill-comm {
 	margin: 0 0 2px;
+}
+
+.skill-comm span::selection {
+	background-color: #FFBF15;
 }
 
 /*Education*/
